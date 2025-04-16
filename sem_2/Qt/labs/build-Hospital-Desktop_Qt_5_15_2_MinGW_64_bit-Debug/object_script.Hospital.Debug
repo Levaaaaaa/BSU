@@ -1,0 +1,13 @@
+debug/agedialog.o
+debug/diagnosisdialog.o
+debug/main.o
+debug/mainwindow.o
+debug/patient.o
+debug/surnamedialog.o
+debug/ward.o
+debug/warddialog.o
+debug/moc_agedialog.o
+debug/moc_diagnosisdialog.o
+debug/moc_mainwindow.o
+debug/moc_surnamedialog.o
+debug/moc_warddialog.o

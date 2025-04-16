@@ -1,0 +1,5 @@
+﻿  lesson_11_1.cpp
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\13_03_23\lesson_11_1\lesson_11_1.cpp(17,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\13_03_23\lesson_11_1\lesson_11_1.cpp(31,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\13_03_23\lesson_11_1\lesson_11_1.cpp(33,30): warning C4018: <: несоответствие типов со знаком и без знака
+  lesson_11_1.vcxproj -> D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\13_03_23\lesson_11_1\Debug\lesson_11_1.exe

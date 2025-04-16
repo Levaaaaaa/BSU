@@ -1,0 +1,4 @@
+﻿  Source.cpp
+Mod_MyClass.obj : error LNK2005: "public: __thiscall MyClass::MyClass(void)" (??0MyClass@@QAE@XZ) уже определен в Example.obj
+Mod_MyClass.obj : error LNK2005: "public: __thiscall MyClass::~MyClass(void)" (??1MyClass@@QAE@XZ) уже определен в Example.obj
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\06_02_23\Example\Debug\Example.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более

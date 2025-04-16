@@ -1,0 +1,4 @@
+﻿  Assembling asm_4_3_1.asm...
+asm_4_3_1.asm(14): error A2070: invalid instruction operands
+asm_4_3_1.asm(13): error A2032: invalid use of register
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\asm_4_3_1.obj" /W3 /errorReport:prompt  /Taasm_4_3_1.asm" с кодом "1".

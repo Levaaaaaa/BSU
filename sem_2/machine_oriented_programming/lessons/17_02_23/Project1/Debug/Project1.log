@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\17_02_23\Project1\Source.cpp(21,3): error C2400: синтаксическая ошибка во встроенном коде на языке ассемблера в "второй операнд"; обнаружено "PTR"
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\17_02_23\Project1\Source.cpp(31,3): error C2400: синтаксическая ошибка во встроенном коде на языке ассемблера в "второй операнд"; обнаружено "newline"
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\17_02_23\Project1\Source.cpp(33,3): error C2415: недопустимый тип операнда

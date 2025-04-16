@@ -1,0 +1,4 @@
+﻿  Assembling asm_4_1.asm...
+Debug\asm_4_1.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+LINK : error LNK2001: неразрешенный внешний символ _mainCRTStartup.
+D:\Leva\BSU\OiMP\Tasks\2_sem\Labs\4\asm_4_1\Debug\asm_4_1.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

@@ -1,0 +1,3 @@
+﻿  less_9_1.cpp
+D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\06_03_23\lesson_9_1\less_9_1.cpp(11,19): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  lesson_9_1.vcxproj -> D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\06_03_23\lesson_9_1\Debug\lesson_9_1.exe

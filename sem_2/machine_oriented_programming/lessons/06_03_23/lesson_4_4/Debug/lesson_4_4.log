@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (lesson_4_4.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Assembling less_9_4_asm.asm...
+  less_9_4.cpp
+  lesson_4_4.vcxproj -> D:\Leva\BSU\OiMP\Tasks\2_sem\Lessons\06_03_23\lesson_4_4\Debug\lesson_9_4.exe

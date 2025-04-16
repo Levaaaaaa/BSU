@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Leva\BSU\OiMP\Tasks\2_sem\Labs\4_flowerbed\Source.cpp(85,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\2_sem\Labs\4_flowerbed\Source.cpp(127,20): warning C4018: <: несоответствие типов со знаком и без знака
+  4_flowerbed.vcxproj -> D:\Leva\BSU\OiMP\Tasks\2_sem\Labs\4_flowerbed\Debug\4_flowerbed.exe

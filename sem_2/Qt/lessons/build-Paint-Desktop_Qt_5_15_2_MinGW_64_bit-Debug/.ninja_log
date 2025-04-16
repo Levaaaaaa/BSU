@@ -1,0 +1,9 @@
+# ninja log v5
+38	477	7028225840701068	D:/Leva/BSU/OiMP/Tasks/2_sem/Ot/Lessons/build-Paint-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Paint_autogen/timestamp	555af5a800e8e8b2
+38	477	7028225840701068	Paint_autogen/timestamp	555af5a800e8e8b2
+1297	6322	7028222896449110	CMakeFiles/Paint.dir/main.cpp.obj	56eb46e86dcf93b5
+38	477	7028225840701068	Paint_autogen/mocs_compilation.cpp	555af5a800e8e8b2
+488	4115	7028225877064503	CMakeFiles/Paint.dir/mainwindow.cpp.obj	d449fc66e699ff19
+1291	5969	7028222892436994	CMakeFiles/Paint.dir/Paint_autogen/mocs_compilation.cpp.obj	fc2f8b1e23e89a2e
+38	477	7028225840701068	D:/Leva/BSU/OiMP/Tasks/2_sem/Ot/Lessons/build-Paint-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Paint_autogen/mocs_compilation.cpp	555af5a800e8e8b2
+4115	4517	7028225880945565	Paint.exe	654989818152e9b9

@@ -1,0 +1,13 @@
+release/agedialog.o
+release/diagnosisdialog.o
+release/main.o
+release/mainwindow.o
+release/patient.o
+release/surnamedialog.o
+release/ward.o
+release/warddialog.o
+release/moc_agedialog.o
+release/moc_diagnosisdialog.o
+release/moc_mainwindow.o
+release/moc_surnamedialog.o
+release/moc_warddialog.o

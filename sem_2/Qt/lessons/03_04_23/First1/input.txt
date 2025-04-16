@@ -1,0 +1,5 @@
+DDR Hewlett-Packard model3 param1 150.990000 1
+plata Gigabyte AM4 GA 164.000000 1
+DDR3 Kingston SO-DIMM KVR16LS11 231.000000 1
+plata Gigabyte AM5 GA 464.000000 0
+DDR4 Kingston SO-DIMM KVR16LS12 235.000000 1

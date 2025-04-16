@@ -1,0 +1,4 @@
+p passenger 50 1200 1000 20 60 no
+f fright 51 1500 4000 300 Gruz1 solid
+f fright 52 1100 3000 200 Gruz2 solid
+p passenger 1900 2000 53 30 120 yes

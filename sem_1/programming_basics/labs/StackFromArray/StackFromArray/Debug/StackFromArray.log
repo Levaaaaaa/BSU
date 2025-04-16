@@ -1,0 +1,47 @@
+﻿  StackFromArray.cpp
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(15,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(44,25): error C2227: выражение слева от "->GetSize" должно указывать на тип класса, структуры или объединения либо на универсальный тип
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(44,25): message : тип: T *
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(43): message : во время компиляции функции-члена класс шаблон "int Stack<int>::size(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(15): message : выполняется компиляция ссылки на экземпляр шаблон функции "int Stack<int>::size(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(9): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Stack<int>"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(62,22): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(61): message : во время компиляции функции-члена класс шаблон "T Stack<T>::peek(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(17): message : выполняется компиляция ссылки на экземпляр шаблон функции "T Stack<T>::peek(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(62,13): error C2039: "Array": не является членом "Stack<int>".
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(9): message : см. объявление "Stack<int>"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(62,40): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(69,10): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(67): message : во время компиляции функции-члена класс шаблон "void Stack<int>::push(const T &)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackFromArray.cpp(11): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Stack<int>::push(const T &)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(73,10): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(73,30): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(76,9): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\StackClass.h(76,27): error C2955: "Array": для использования класс шаблон требуется список аргументов шаблон
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\StackFromArray\StackFromArray\Array1.h(5): message : см. объявление "Array"

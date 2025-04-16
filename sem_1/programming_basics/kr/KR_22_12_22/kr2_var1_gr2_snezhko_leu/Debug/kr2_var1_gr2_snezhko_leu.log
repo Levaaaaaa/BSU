@@ -1,0 +1,9 @@
+﻿  Double.cpp
+D:\Leva\BSU\OiMP\Tasks\KR_22_12_22\kr2_var1_gr2_snezhko_leu\Double.cpp(11,24): warning C4091: : пропускается слева от "std::invalid_argument", когда ни одна переменная не объявлена
+  Integer.cpp
+  NumberService.cpp
+D:\Leva\BSU\OiMP\Tasks\KR_22_12_22\kr2_var1_gr2_snezhko_leu\NumberService.cpp(40,23): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\KR_22_12_22\kr2_var1_gr2_snezhko_leu\NumberService.cpp(43,9): warning C4244: аргумент: преобразование "double" в "unsigned int", возможна потеря данных
+D:\Leva\BSU\OiMP\Tasks\KR_22_12_22\kr2_var1_gr2_snezhko_leu\NumberService.cpp(44,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
+  kr2_var1_gr2_snezhko_leu.vcxproj -> D:\Leva\BSU\OiMP\Tasks\KR_22_12_22\kr2_var1_gr2_snezhko_leu\Debug\kr2_var1_gr2_snezhko_leu.exe

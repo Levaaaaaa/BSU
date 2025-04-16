@@ -1,0 +1,15 @@
+#pragma once
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <iterator>
+#include <sstream>
+#include <string>
+#include <vector>
+#include "base.h"
+#include "chocolate.h"
+#include "marshmallow.h"
+#include "lollypop.h"
+#include "present.h"
+#include "sweet.h"

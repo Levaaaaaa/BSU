@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "functionSwap", "functionSwap.vcxproj", "{48F7D11A-BA8F-481A-B675-80DC53DFC09F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Debug|x64.ActiveCfg = Debug|x64
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Debug|x64.Build.0 = Debug|x64
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Debug|x86.ActiveCfg = Debug|Win32
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Debug|x86.Build.0 = Debug|Win32
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Release|x64.ActiveCfg = Release|x64
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Release|x64.Build.0 = Release|x64
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Release|x86.ActiveCfg = Release|Win32
+		{48F7D11A-BA8F-481A-B675-80DC53DFC09F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA816351-CA03-46A1-9D99-FDA3E6AED419}
+	EndGlobalSection
+EndGlobal

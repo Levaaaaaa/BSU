@@ -1,0 +1,15 @@
+#pragma once
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <iterator>
+#include <sstream>
+#include <string>
+#include <vector>
+#include "Plane.h"
+#include "Boeing.h"
+#include "Airbus.h"
+#include "Tu.h"
+#include "Hangar.h"
+#include "Aviacompany.h"

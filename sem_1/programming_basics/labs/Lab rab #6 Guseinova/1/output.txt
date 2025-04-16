@@ -1,0 +1,46 @@
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+class String
+{
+public:
+ String();
+ String(const unsigned char*);
+ String(unsigned char);
+ String(const String&);
+
+ String& operator=(const String&);
+ String& operator=(const unsigned char*);
+ String& operator=(const unsigned char);
+
+ friend std::ostream& operator<<(std::ostream&, const String&);
+ friend std::istream& operator>>(std::istream&,  String&);
+ 
+ String operator+(const String&)const;
+ String& operator+=(const String&);
+
+ bool operator<( const String&)const;
+ bool operator>(const String&)const;
+ bool operator<=(const String&)const;
+ bool operator>=(const String&)const;
+ bool operator==(const String&)const;
+ bool operator!=(const String&)const;
+
+ unsigned char& operator[](size_t);
+ const unsigned char& operator[](size_t)const;
+ String& erase(int , int );
+
+ size_t getCapacity() const { return capacity; };
+ size_t getSize() const { return size; };
+
+ ~String();
+
+private:
+ 
+ size_t capacity;//память, выделенная для строки
+ size_t size;//фактичесоке количество символов в строке
+ unsigned char* data;
+ 
+ bool checkMem();
+
+};

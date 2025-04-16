@@ -1,0 +1,101 @@
+﻿  test.cpp
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(48,9): error C2065: Sin: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(48,14): error C2065: sinPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(49,9): error C2065: Cos: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(49,14): error C2065: cosPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(50,9): error C2065: Tg: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(50,13): error C2065: tgPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(51,9): error C2065: Ctg: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(51,14): error C2065: ctgPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(53,38): error C2065: sinPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(53,46): error C2065: cosPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(53,54): error C2065: tgPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(53,61): error C2065: ctgPtr: необъявленный идентификатор
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(57,55): error C2572: Exponenta::operation: переопределение аргумента по умолчанию: параметр 1
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(171): message : см. объявление "Exponenta::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(62,48): error C2572: Ln::operation: переопределение аргумента по умолчанию: параметр 1
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(183): message : см. объявление "Ln::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(113,16): error C2059: синтаксическая ошибка: ->
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(117,21): error C2561: HardMathUI: функция должна возвращать значение
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(102): message : см. объявление "HardMathUI"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.cpp(141,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(33,11): error C2259: "HardMath": невозможно создать экземпляр абстрактного класса
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(33,11): message : из-за следующих членов:
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(33,11): message : long double Operations::operation(double,double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(16): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(33,11): message : double Operations::operation(double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(15): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(34,2): error C2039: "arcsin": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(34,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(34,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(39,11): error C2259: "HardMath": невозможно создать экземпляр абстрактного класса
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(39,11): message : из-за следующих членов:
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(39,11): message : long double Operations::operation(double,double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(16): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(39,11): message : double Operations::operation(double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(15): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(40,2): error C2039: "arccos": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(40,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(40,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(45,11): error C2259: "HardMath": невозможно создать экземпляр абстрактного класса
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(45,11): message : из-за следующих членов:
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(45,11): message : long double Operations::operation(double,double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(16): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(45,11): message : double Operations::operation(double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(15): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(46,2): error C2039: "expon": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(46,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(46,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(47,2): error C2039: "expon": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(47,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(47,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(52,11): error C2259: "HardMath": невозможно создать экземпляр абстрактного класса
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(52,11): message : из-за следующих членов:
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(52,11): message : long double Operations::operation(double,double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(16): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(52,11): message : double Operations::operation(double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(15): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(53,2): error C2039: "ln": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(53,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(53,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(54,2): error C2039: "ln": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(54,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(54,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(55,2): error C2039: "ln": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(55,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(55,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(56,2): error C2039: "ln": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(56,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(56,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(62,11): error C2259: "HardMath": невозможно создать экземпляр абстрактного класса
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(62,11): message : из-за следующих членов:
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(62,11): message : long double Operations::operation(double,double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(16): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(62,11): message : double Operations::operation(double): абстрактный
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.h(15): message : см. объявление "Operations::operation"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(63,2): error C2039: "log": не является членом "HardMath".
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\HardMath.h(5): message : см. объявление "HardMath"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(63,2): error C2660: testing::internal::EqHelper<false>::Compare: функция не принимает 3 аргументов
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include\gtest\gtest.h(1481,26): message : см. объявление "testing::internal::EqHelper<false>::Compare"
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\MathTest\test.cpp(63,2): error C2737: "<Нет данных>: необходимо инициализировать объект <Нет данных>

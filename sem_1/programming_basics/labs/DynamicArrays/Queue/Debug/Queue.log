@@ -1,0 +1,27 @@
+﻿  Queue.cpp
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Array.h(87,12): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Array.h(84): message : во время компиляции функции-члена класс шаблон "void Array<T>::SetSize(int,int)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Array.h(118): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Array<T>::SetSize(int,int)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Array.h(40): message : во время компиляции функции-члена класс шаблон "Array<T>::Array(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\QueueClass.h(24): message : выполняется компиляция ссылки на экземпляр шаблон функции "Array<T>::Array(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\QueueClass.h(24): message : во время компиляции функции-члена класс шаблон "Queue<int>::Queue(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Queue.cpp(8): message : выполняется компиляция ссылки на экземпляр шаблон функции "Queue<int>::Queue(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Queue.cpp(8): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Queue<int>"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Array.h(88,24): warning C4018: <: несоответствие типов со знаком и без знака
+  Queue.vcxproj -> D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Queue\Debug\Queue.exe

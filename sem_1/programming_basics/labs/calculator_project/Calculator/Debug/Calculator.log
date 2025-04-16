@@ -1,0 +1,4 @@
+﻿  OperationsClass.cpp
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.cpp(7,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\OperationsClass.cpp(129): warning C4715: Operations::selectOperation: значение возвращается не при всех путях выполнения
+  Calculator.vcxproj -> D:\Leva\BSU\OiMP\Tasks\Calculator\Calculator_\Calculator\Debug\Calculator.exe

@@ -1,0 +1,5 @@
+﻿  3.cpp
+D:\Leva\BSU\ОиМП\Tasks\Лаб раб\Lab rab 5\3\3.cpp(148,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Leva\BSU\ОиМП\Tasks\Лаб раб\Lab rab 5\3\3.cpp(119): warning C4715: secondEntry: значение возвращается не при всех путях выполнения
+D:\Leva\BSU\ОиМП\Tasks\Лаб раб\Lab rab 5\3\3.cpp(130): warning C4715: firstEntry: значение возвращается не при всех путях выполнения
+  3.vcxproj -> D:\Leva\BSU\ОиМП\Tasks\Лаб раб\Lab rab 5\3\Debug\3.exe

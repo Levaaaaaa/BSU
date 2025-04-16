@@ -1,0 +1,7 @@
+c Alenka 100 3 0.2 0.7 milk 1
+m Zefirka 50 2 0.35 0 Vanilla
+l Chupachups 20 0.75 0.9 apple heart
+c AlpenGold 20 1 0.1 0.9 classic 0
+m BobrZefir 75 2 0.35 0 strawberry
+l Chupachups 5 0.75 0.9 Cocacolla Ball
+l Chupachups 10 0.3 0.8 Orange Ball

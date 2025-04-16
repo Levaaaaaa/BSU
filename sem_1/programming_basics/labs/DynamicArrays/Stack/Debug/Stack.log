@@ -1,0 +1,27 @@
+﻿  Stack.cpp
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Array.h(87,12): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Array.h(84): message : во время компиляции функции-члена класс шаблон "void Array<T>::SetSize(int,int)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Array.h(118): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Array<T>::SetSize(int,int)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Array.h(40): message : во время компиляции функции-члена класс шаблон "Array<T>::Array(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\StackClass.h(24): message : выполняется компиляция ссылки на экземпляр шаблон функции "Array<T>::Array(void)"
+          with
+          [
+              T=int
+          ]
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\StackClass.h(24): message : во время компиляции функции-члена класс шаблон "Stack<int>::Stack(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Stack.cpp(8): message : выполняется компиляция ссылки на экземпляр шаблон функции "Stack<int>::Stack(void)"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Stack.cpp(8): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Stack<int>"
+D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Array.h(88,24): warning C4018: <: несоответствие типов со знаком и без знака
+  Stack.vcxproj -> D:\Leva\BSU\OiMP\Tasks\Лаб раб\DynamicArrays\Stack\Debug\Stack.exe

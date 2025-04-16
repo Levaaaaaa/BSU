@@ -1,0 +1,24 @@
+﻿  AllInclude.cpp
+  ArithmFun.cpp
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\ArithmFun.cpp(23,10): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\ArithmFun.cpp(26,24): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\ArithmFun.cpp(55,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\ArithmFun.cpp(86,15): warning C4018: >: несоответствие типов со знаком и без знака
+  Calculator.cpp
+  ExpressionsClass.cpp
+  HardMath.cpp
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\HardMath.cpp(172,20): warning C4101: i: неиспользованная локальная переменная
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\HardMath.cpp(217,26): warning C4018: <: несоответствие типов со знаком и без знака
+  LogicFun.cpp
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\LogicFun.cpp(45,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\LogicFun.cpp(76,15): warning C4018: >: несоответствие типов со знаком и без знака
+  OperationsClass.cpp
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\OperationsClass.cpp(7,26): warning C4018: <: несоответствие типов со знаком и без знака
+  UI.cpp
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\UI.cpp(7,14): warning C4101: operation: неиспользованная локальная переменная
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\UI.cpp(82,6): warning C4101: operation: неиспользованная локальная переменная
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\UI.cpp(105,6): warning C4101: operation: неиспользованная локальная переменная
+  Создание кода...
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\OperationsClass.cpp(129,1): warning C4715: Operations::selectOperation: значение возвращается не при всех путях выполнения
+D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\ExpressionsClass.cpp(107,1): warning C4715: Expressions::execution: значение возвращается не при всех путях выполнения
+  Calculator.vcxproj -> D:\Leva\BSU\BSU\sem_1\programming_basics_and_methodologies\labs\Calculator\Debug\Calculator.exe

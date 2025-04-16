@@ -1,0 +1,4 @@
+﻿  test.cpp
+D:\Leva\BSU\ОиМП\Tasks\Занятия\9_11_22\Project1\Rational.cpp(89): warning C4172: возвращение адреса локальной или временной переменной : out
+D:\Leva\BSU\ОиМП\Tasks\Занятия\9_11_22\Project1\Rational.cpp(96): warning C4717: operator>>: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  test.vcxproj -> D:\Leva\BSU\ОиМП\Tasks\Занятия\9_11_22\Project1\Debug\test.exe

@@ -1,0 +1,729 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{setspace}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+
+\begin{document}
+\setcounter{page}{1}
+\setstretch{1.0}
+\thispagestyle{empty}
+\newgeometry{
+	left=0mm,
+    top=20mm,
+    right=0mm,
+    bottom=20mm
+}
+\begin{center}
+\bf
+\vspace{4cm}
+{
+\setstretch{0.9}
+\mbox{МИНИСТЕРСТВО~ОБРАЗОВАНИЯ~РЕСПУБЛИКИ~БЕЛАРУСЬ} \\~\\
+\mbox{БЕЛОРУССКИЙ~ГОСУДАРСТВЕННЫЙ~УНИВЕРСИТЕТ} \\~\\
+\mbox{ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ} \\~\\
+\mbox{Кафедра~биомедицинской~информатики} \\~\\
+}
+\vspace{4cm}
+\bf
+\mbox{Лабораторная работа 1}\\
+\vspace{1cm}
+\vspace{3cm}
+\end{center}
+\begin{tabular}{ll}
+\hspace{10.5cm}
+&Снежко Льва Владимировича~\\
+&студента 3-го курса\\~\\
+&Преподаватель:\\
+&Дайняк Виктор Владимирович
+\end{tabular}
+\vspace{7cm}
+\begin{center}
+Mинск, 2025
+\end{center}
+\clearpage
+\restoregeometry
+\title{Вариант 12}
+\date{}
+\maketitle
+\section{Задание 1. Привести уравнение к каноническому виду}
+$$u_{xx} + 4u_{xy} + 13u_{yy} + 3u_x - 9u = -9(x+y)$$
+Характеристическое уравнение:
+$$(dy)^2 - 4dxdy + 13(dx)^2 = 0$$
+$$D = 16(dx)^2 - 52(dx)^2 = -36(dx)^2 < 0$$
+Значит, уравнение элиптического типа
+$$dy = \frac{4 \pm 6i}{2}dx \Rightarrow y - \frac{4 \pm 6i}{2}x = C$$
+$$\xi = y - 2x, \xi_x = -2, \xi_y = 1$$
+$$\eta = 3x, \eta_x = 3, \eta_y = 0$$
+
+$$u_x = u_{\xi}\xi_x + u_{\eta}\eta_x = -2u_{\xi} + 3u_{\eta}$$
+$$u_y = u_{\xi}\xi_y + u_{\eta}\eta_y = u_{\xi}$$
+$$u_{xx} = -2u_{\xi\xi}\xi_x - 2u_{\xi\eta}\eta_x + 3u_{\xi\eta}\xi_x + 3u_{\eta\eta}\eta_x 
+= 4u_{\xi\xi} - 12u_{\xi\eta}+9u_{\eta\eta}$$
+$$u_{xy} = (u_y)_x = u_{\xi\xi}\xi_x + u_{\xi_\eta}\eta_x
+= -2u_{\xi\xi} + 3u_{\xi_\eta}$$
+$$u_{yy} = u_{\xi\xi}\xi_y + u_{\xi_\eta}\eta_y 
+= u_{\xi\xi}$$
+Вычислим коэффициенты:
+$$u_{\xi\xi}: 4 - 8 + 13 = 9$$
+$$u_{\xi\eta}: -12 + 12 = 0$$
+$$u_{\eta\eta}: 9$$
+$$u_{\xi} = -6$$
+$$u_{\eta} = 9$$
+Имеем
+$$9u_{\xi\xi} + u_{\eta\eta} - 6u_{\xi} +9u_{\eta} - 9u = -9(\xi+\eta)$$
+$$$$
+
+\section{Задание 2. Привести уравнение к каноническому виду}
+$$y^2u_{xx}+2xu_{xy} + 2x^2u_{yy} + yu_y = 0$$
+
+Характеристическое уравнение:
+$$y^2(dy)^2 - 2xdxdy + 2x^2(dx)^2 = 0$$
+$$D = (4x^2 - 8x^2y^2)(dx)^2 = 4x^2(1 - 2y^2)(dx)^2$$
+
+\subsection{Случай 1. Уравнение гиперболического типа} 
+
+$$D > 0 \Rightarrow 1 - 2y^2 > 0 \Rightarrow y^2 < 1/2$$
+$$dy = \frac{2x + 2x\sqrt{1-2y^2}}{2y^2}dx = \frac{1+\sqrt{1-2y^2}}{y^2}xdx$$
+$$\xi = 1/2y - 1/2x^2 - 1/2 \int\limits_{0}^{y} \sqrt{1-2t^2} \,dt$$
+$$\xi_x = -x$$ 
+$$\xi_y = 1/2(1 - \sqrt(1-2y^2))$$
+$$\eta = 1/2y - 1/2x^2 + 1/2 \int\limits_{0}^{y} \sqrt{1-2t^2} \,dt$$
+$$\eta_x = -x$$ 
+$$\eta_y = 1/2(1 + \sqrt{1-2y^2})$$
+
+$$u_x = u_{\xi}\xi_x + u_{\eta}\eta_x = -xu_{\xi} - xu_{\eta}$$
+$$u_y = u_{\xi}\xi_y + u_{\eta}\eta_y = 1/2(1 - \sqrt{1-2y^2})u_{\xi} + 1/2(1 + \sqrt{1-2y^2})u_{\eta}$$
+
+$$u_{xx} = -u_\xi - u_\eta - x(u_{\xi\xi}\xi_x + u_{\xi\eta}\eta_x)
+- x(u_{\xi\eta}\xi_x + u_{\eta\eta}\eta_x) = 
+x^2u_{\xi\xi} + 2x^2u_{\xi\eta} + x^2u_{\eta\eta} - u_\xi - u_\eta$$
+
+\begin{multline}
+u_xy = -x(u_{\xi\xi}\xi_y + u_{\xi\eta}\eta_y + u_{\xi\eta}\xi_y + u_{\eta\eta}\eta_y) \notag \\
+= -1/2x(1 - \sqrt{1-2y^2})u_{\xi\xi} - xu_{\xi\eta} - 1/2x(1 + \sqrt{1-2y^2})u_{\eta\eta}
+\end{multline}
+
+\begin{align}
+    u_yy &= (1/2(1 - \sqrt{1-2y^2})u_\xi + 1/2(1 + \sqrt{1-2y^2})u_\eta)_y \notag \\
+    &\quad = 1/2(-y^2 - \sqrt{1-2y^2} + 1)U_{\xi\xi} + y^2u_{\xi\eta} \notag \\ 
+    & \quad + 1/2(-y^2 + \sqrt{1-2y^2} + 1)u_{\eta\eta} \notag \\
+    &\quad + \frac{y}{\sqrt{1-2y^2}}u_\xi - \frac{y}{\sqrt{1-2y^2}}u_\eta \notag
+\end{align}
+
+Вычислим коэффициенты
+
+$$u_{\xi\xi} : x^2y^2 - 1/2(1 - \sqrt{1-2y^2})*2x^2 + 
++ 2x^2*1/2(-y^2 - \sqrt{1-2y^2} + 1) = 0$$
+
+$u_{\xi\eta} : 2x^2y^2 - 2x^2 + 2x^2y^2 = 4x^2y^2 - 2x^2$
+$$u_{\eta\eta} : x^2y^2 - 2x^2*1/2(1+\sqrt{1-2y^2}) + 2x^2*1/2(-y^2 + \sqrt{1-2y^2} + 1) = 0$$
+
+$u_\xi : -y^2 + \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1-\sqrt{1-2y^2})$
+
+$u_\eta : -y^2 - \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1+\sqrt{1-2y^2})$
+
+Имеем
+
+\begin{align}
+    &\quad(4x^2y^2 - 2x^2)u_{\xi\eta} \notag \\
+    &\quad+ (-y^2 + \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1-\sqrt{1-2y^2}))u_\xi \notag \\
+    &\quad+ (-y^2 - \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1+\sqrt{1-2y^2}))u_\eta = 0
+\end{align}
+
+\subsection{Случай 2. Уравнение параболического типа}
+$D = 4x^2(1-2y^2) = 0, x = 0$
+$$dy = -\frac{2x}{2y^2}dx \Rightarrow 1/3y^3 = C$$
+$$\xi = 1/3y^3, \xi_x = 0, \xi_y = y^2$$
+$$\eta = x, \eta_x = 1, \eta_y = 0$$
+
+$$u_x = u_\xi\xi_x + u_\eta\eta_x = u_\eta$$
+$$u_y = u_\xi\xi_y + u_\eta\eta_y = y^2u_\xi$$
+
+$$u_{xx} = u_{\xi\eta}\xi_x + u_{\eta\eta}\eta_x = u_{\eta\eta}$$
+$$u_{xy} = u_{\xi\eta}\xi_y + u_{\eta\eta}\eta_y = y^2u_{\xi\eta}$$
+$$u_{yy} = 2yu_\xi + y^2u_{\xi\xi}\xi_y + y^2u_{\xi\eta}\eta_y = 2yu_\xi + y^4u_{\xi\xi}$$
+
+Вычислим коэффициенты
+
+\begin{align}
+&=u_{\xi\xi} : 2x^2y^4 = 0 \\ \notag
+&=u_{\xi\eta}: 2xy^2 = 0 \\ \notag
+&=u_{\eta\eta}: y^2 \\ \notag
+&=u_\xi: 4x^2y + y^3 \\ \notag
+&=u_\eta: 0 \\ \notag
+\end{align}
+
+Имеем
+$$y^2u_{\eta\eta} + (4x^2y + y^3)u_\xi = 0$$
+
+\section{Задание 3. Привести уравнение к каноническому виду в каждой области, где сохраняется тип уравнения}
+$$yu_{xx} + xu_{yy} = 0$$
+Характеристическое уравнение:
+$$y(dy)^2 + x(dx)^2 = 0$$
+$$D = -4xy$$
+
+\subsection{Случай 1. Уравнение гиперболического типа}
+$$D > 0, x < 0, y > 0$$
+$$dy = \sqrt{-\frac{x}{y}}dx,
+dy = -\sqrt{-\frac{x}{y}}dx$$
+
+$$\xi = 2/3y^{3/2} + 2/3(-x)^{3/2}, \xi_x = -\sqrt{-x}, \xi_y = \sqrt{y}$$
+$$\eta = 2/3y^{3/2} - 2/3(-x)^{3/2}, \eta_x = \sqrt{-x}, \eta_y = \sqrt{y}$$
+
+\begin{align}
+u_x &= u_\xi\xi_x + u_\eta\eta_x = -\sqrt{-x}u_\xi + \sqrt{-x}u_\eta \notag \\ \notag
+u_y &= u_\xi\xi_y + u_\eta\eta_y = \sqrt{y}u_\xi + \sqrt{y}u_\eta \\ \notag
+u_{xx} &= \frac{1}{2\sqrt{-x}}u_\xi - \frac{1}{2\sqrt{-x}}u_\eta 
+- \sqrt{-x}(u_{\xi\xi}\xi_x + u_{\xi\eta}\eta_x)
++ \sqrt{-x}(u_{\xi\eta}\xi_x + u_{\eta\eta}\eta_x) \\ \notag
+&= -xu_{\xi\xi} + 2xu_{\xi\eta} - xu_{\eta\eta} + \frac{1}{2\sqrt{-x}}u_\xi - \frac{1}{2\sqrt{-x}}u_\eta \\ \notag
+u_{xy} &= \sqrt{y}(u_{\xi\xi}\xi_x + u_{\xi\eta}\eta_x) + \sqrt{y}(u_{\xi\eta}\xi_x + u_{\eta\eta}\eta_x)  \\ \notag
+&= -\sqrt{-xy}u_{\xi\xi} + \sqrt{-xy}u_{\xi\eta} \\ \notag
+u_{yy} &= \frac{1}{2\sqrt{y}}u_\xi + \frac{1}{2\sqrt{y}}u_\eta + \sqrt{x}(u_{\xi\xi}\xi_y + u_{\xi\eta}\eta_y + u_{\xi\eta}\xi_y + u_{\eta\eta}\eta_y) \\ \notag
+&= \frac{1}{2\sqrt{y}}u_\xi + \frac{1}{2\sqrt{y}}u_\eta + yu_{\xi\xi} + 2yu_{\xi\eta} + yu_{\eta\eta} \notag
+\end{align}
+
+Вычислим коэффициенты
+\begin{align}
+u_{\xi\xi} &: -xy + xy = 0 \notag \\ \notag
+u_{\xi\eta} &: 2xy + 2xy = 4xy \\ \notag
+u_{\eta\eta} &: xy - xy = 0 \\ \notag
+u_\xi &: -\frac{1}{2\sqrt{-xy}}(\frac{1}{\sqrt{y}} - \frac{1}{\sqrt{-x}}) \\ \notag
+u_\eta &: -\frac{1}{2\sqrt{-xy}}(\frac{1}{\sqrt{y}} + \frac{1}{\sqrt{-x}}) \\ \notag
+\end{align}
+
+Итог:
+\begin{align}
+4xyu_{\xi\eta} \notag
+- \frac{1}{2\sqrt{-xy}}(\frac{1}{\sqrt{y}} - \frac{1}{\sqrt{-x}})u_\xi \notag 
+&- \frac{1}{2\sqrt{-xy}}(\frac{1}{\sqrt{y}} + \frac{1}{\sqrt{-x}})u_\eta = 0 \notag
+\end{align}
+
+\subsection{Случай 2. Уравнение параболического типа}
+$$D = 0, x = 0 \Rightarrow dy = 0 \Rightarrow y = C$$
+$$\xi = y, \xi_x = 0, \xi_y = 1$$
+$$\eta = x, \eta_x = 1, \eta_y = 0$$
+
+\begin{align}
+u_x &= u_\eta, \notag
+u_y = u_\xi, \notag \\
+u_{xx} &= u_{\eta\eta}, \notag
+u_{xy} = u_{\xi\eta}, \notag
+u_{yy} = u_{\xi\xi} \notag
+\end{align}
+
+Вычислим коэффициенты
+\begin{align}
+u_{\xi\xi} &: x = 0 \notag \\
+u_{\xi\eta} &: 0 \notag \\
+u_{\eta\eta} &: y \notag \\
+u_{\xi} &: 0 \notag \\
+u_\eta &: 0 \notag
+\end{align}
+
+Итог:
+$$yu_{\eta\eta} = 0$$
+
+\subsection{Случай 3. Уравнение элиптического типа}
+$$D < 0, -4xy < 0, x>0, y>0$$
+$$dy = \sqrt{\frac{x}{y}}idx$$
+$$\xi = 2/3y^{3/2}, \xi_x = 0, \xi_y = \sqrt{y}$$
+$$\eta = 2/3x^{3/2}, \eta_x = \sqrt{x}, \eta_y = 0$$
+
+\begin{align}
+u_x &= \sqrt{x}u_\eta \notag \\
+u_y &= \sqrt{y}u_\xi \notag \\
+u_{xx} &= -\frac{1}{2\sqrt{x}}u_\eta + xu_{\eta\eta} \notag \\
+u_{xy} &= \sqrt{x}\sqrt{y}u_{\xi\eta} \notag \\
+u_{yy} &= \frac{1}{2\sqrt{y}}u_\xi + yu_{\xi\xi} \notag
+\end{align}
+
+Вычислим коэффициенты
+\begin{align}
+u_{\xi\xi} &: xy \notag     &u_{\xi\eta} : 0 \notag \\
+u_{\eta\eta} &: xy \notag \\
+u_\xi &: \frac{x}{2\sqrt{y}}; &u_\eta : \frac{y}{2\sqrt{x}} \notag 
+\end{align}
+
+Итог:
+$$xyu_{\xi\xi} + xyu_{\eta\eta} + \frac{x}{2\sqrt{y}}u_\xi + \frac{y}{2\sqrt{x}}u_\eta$$
+
+\section{Задание 4. Привести уравнение к каноническому виду и упростить}
+$$u_{xx} - u_{yy} + u_x + u_y - 4u = 0$$
+Характеристическое уравнение:
+$$(dy)^2 - (dx)^2 = 0$$
+$D = 4(dx)^2 > 0 \Rightarrow$ уравнение гиперболического типа.
+Нетрудно видеть, что: 
+\begin{align}
+\xi &= y-x &\eta &= y+x \notag \\
+\xi_x &= -1 &\eta_x &= 1 \notag \\
+\xi_y &= 1 &\eta_y &= 1 \notag 
+\end{align}
+
+\begin{align}
+u_x &= -u_\xi + u_\eta \notag \\
+u_y &= u_\xi + u_\eta \notag \\
+u_{xx} &= u_{\xi\xi} - 2u_{\xi\eta} + u_{\eta\eta} \notag \\
+u_{xy} &= -u_{\xi\xi} + u_{\eta\eta} \notag \\
+u_{yy} &= u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta} \notag
+\end{align}
+
+Вычислим коэффициенты
+\begin{align}
+    u_{\xi\xi} &: 0 &u_\xi &: 0 \notag \\
+    u_{\xi\eta} &: -4 &u_\eta &: 2 \notag \\
+    u_{\eta\eta} &: 0 \notag
+\end{align}
+
+Итог
+$$2u_{\xi\eta} - u_\eta + 2u = 0$$
+
+\section{Задание 5. Найти общее решение уравнения}
+$$u_{xx} + 10u_{xy} + 24u_{yy} + u_x + 4u_y = y-4x$$
+Характеристическое уравнение
+$$(dy)^2 - 10dxdy + 24(dx)^2 = 0$$
+$D = 4(dx)^2 > 0 \Rightarrow$ уравнение гиперболического типа
+\begin{align}
+dy &= 6dx &dy = 4dx \notag
+\end{align}
+
+\begin{align}
+\xi &= y - 6x &\eta &= y-4x \notag \\
+\xi_x &= -6 &\eta_x &= -4 \notag \\
+\xi_y &= 1 &\eta_y &= 1 \notag
+\end{align}
+
+\begin{align}
+    u_x &= -6u_\xi - 4u_\eta \notag \\
+    u_y &= u_\xi + u_\eta \notag \\
+    u_{xx} &= 36u_{\xi\xi} + 48u_{\xi\eta} + 16u_{\eta\eta} \notag \\
+    u_{xy} &= -6u_{\xi\xi} - 10u_{\xi\eta} + -4u_{\eta\eta} \notag \\
+    u_{yy} &= u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta} \notag
+\end{align}
+
+Вычислим коэффициенты
+\begin{align}
+u_{\xi\xi} &: 0 &u_\xi &: -2 \notag \\
+u_{\xi\eta} &: -4 &u_\eta &: 0 \notag \\
+u_{\eta\eta} &: 0 \notag
+\end{align}
+
+Получим уравнение
+$$-4u_{\xi\eta} - 2u_\xi = \eta$$
+
+Проведем замену:
+$v = u_\xi$
+$$-4v_\eta - 2v \eta = \eta$$
+Найдем общее решение однородного уравнения:
+$$v_{oo} = C(\xi)e^{-\frac{\eta}{2}}$$
+
+Методом Лагранжа найдем частное решение неоднородного уравнения:
+$$v = -\frac{1}{2}\eta + C_2(\xi)e^{-\frac{\eta}{2}} - 4$$
+
+Получим общее решение неоднородного уравнения:
+$$v_{OH} = u_\xi = C(\xi)e^{-\frac{\eta}{2}} -\frac{1}{2}\eta + C_2(\xi)e^{-\frac{\eta}{2}} - 4$$
+
+Интегрируем по $\xi$
+$$u = C_5(\xi)e^{-\frac{\eta}{2}} - \frac{\xi\eta}{2} - 4\xi$$
+
+Подставим x, y:
+$$u(x,y) = C_5(y-6x)e^{-\frac{y-4x}{2}} - \frac{(y-6x)(y-4x)}{2} - 4(y-6x)$$
+
+\section{Задание 6. В каждой из областей, где сохраняется тип уравнения, найти общее решение уравнения}
+Задача 3.37
+$$xu_{xx} - 4x^2u_{xy} + 4x^3u_{yy} + u_x - 4xu_y = x(y+x^2)$$
+
+\subsection{Приведем к каноническому виду}
+    Характеристическое уравнение:
+    $$x(dy)^2 + 4x^2dxdy + 4x^3(dx)^2 = 0$$
+    $D = 0 \Rightarrow$ уравнение параболического типа
+    $$dy = -2xdx$$
+    \begin{align}
+        \xi &= y+x^2 &\xi_x &= 2x &\xi_y &= 1 \notag \\
+        \eta &= x &\eta_x &= 1 &\eta_y &= 0 \notag  
+    \end{align}
+
+    \begin{align}
+        u_x &= 2xu_\xi + u_\eta \notag \\
+        u_\eta &= u_\xi \notag \\
+        u_{xx} &= 4x^2u_{\xi\xi} + 4xu_{\xi\eta} + u_{\eta\eta} + 2u_\xi \notag \\
+        u_{xy} &= 2xu_{\xi\xi} + u_{\xi\eta} \notag \\
+        u_{yy} &= u_{\xi\xi} \notag
+    \end{align}
+
+    Вычислим коэффициенты:
+    \begin{align}
+    u_{\xi\xi} &: 4x^3 - 8x^3 + 4x^3 = 0 &u_\xi &: 2x+2x-4x = 0 \notag \\
+    u_{\xi\eta} &: 4x^2 - 4x^2 = 0 &u_\eta &: 1 \notag \\
+    u_{\eta\eta} &: x \notag
+    \end{align}
+
+    В результате:
+    $$\eta u_{\eta\eta} + u_\eta = \xi\eta$$
+
+    \subsection{Найдем общее решение}
+    Проведем замену: $v = u_\eta$
+    Имеем уравнение:
+    $$\eta v_\eta + v = \xi\eta$$
+    Найдем общее решение однородного:
+    $$v_{OO} = \frac{C(\xi)}{\eta}$$
+    Методом Лагранжа найдем частное решение неоднородного:
+    $$v_\eta = \frac{C_\eta\eta - C}{\eta^2}$$
+    $$C_\eta\eta = \xi\eta^2 \Rightarrow C_\eta = \xi\eta$$
+    $$C = \frac{1}{2} \xi\eta^2 + C_2(\xi)$$
+    Частное решение неоднородного:
+    $$v = \frac{1}{2}\xi\eta + \frac{1}{\eta}C_2(\xi)$$
+    Общее решение неоднородного:
+    $$v = u_\eta = \frac{C_3(\xi)}{\eta} + \frac{1}{2}\xi\eta$$
+    Проинтегрируем по $\eta$
+    $$u = C_3(\xi)ln\eta + \frac{1}{4}\xi\eta^2$$
+    Выразим через x,y:
+    $$u(x,y) = C_3(y+x^2)ln(x) + \frac{1}{4}(y+x^2)x^2$$
+
+\section{Задние 7. Решить задачу Гурса}
+    Задача 12.
+    \begin{equation*}
+        \begin{cases}
+            u_{xx} + 6u_{xy} + 8u_{yy} + u_x + u_y = 0,
+            \\
+            x > 0, y>0,
+            \\
+            u(x,2x) = e^x, u(x, 4x) = xe^x,
+        \end{cases}
+    \end{equation*}
+    \subsection{Приведем уравнение к каноническому виду}
+        Характеристическое уравнение
+        $$(dy)^2 - 6dxdy + 8(dx)^2 = 0$$
+        $D = 36-32 = 4 > 0 \Rightarrow$ уравнение гиперболического типа
+        \begin{align}
+            dy &= 4dx &dy &= 2dx \notag \\
+            \xi &= y-4x &\eta &= y-2x \notag \\
+            \xi_x &= -4 &\eta_x &=-2 \notag \\
+            \xi_y &= 1 &\eta_y &= 1 \notag
+        \end{align}
+
+        \begin{align}
+            u_x &= -4u_\xi - 2u_\eta &u_y &= u_\xi + u_\eta \notag \\
+            u_{xx} &= 16u_{\xi\xi} + 16u_{\xi\eta} + 4u_{\eta\eta} &u_{xy} &= -4u_{\xi\xi} - 6u_{\xi\eta} - 2u_{\eta\eta} \notag \\
+            u_{yy} &= u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta} \notag
+        \end{align}
+
+        Вычислим коэффициенты:
+        \begin{align}
+            u_{\xi\xi} &: 16-24+8=0 &u_\xi &: -4+1 = -3 \notag \\
+            u_{\xi\eta} &: 16-36+16 = -4 &u_\eta &: -2+1 = -1 \notag\\
+            u_{\xi\eta} &: 4-12+8 = 0 \notag
+        \end{align}
+        Имеем:
+        $$-4u_{\xi\eta} - 3u_\xi - u_\eta = 0$$
+    \subsection{Найдем общее решение}
+        Проведем замену: $v = ue^{-\frac{1}{8}\xi - \frac{3}{4}\eta}$
+        \newline Получим уравнение:
+        $$-4v_{\xi\eta}-v_\eta = 0$$
+        Проведем замену $z = -4v_\xi - v$
+        \newline
+        Получим уравнение:
+        $$z_\eta = 0 \Rightarrow z = -4v_\xi - v = C_1(\xi)$$
+        Найдем общее решение однородного уравнения:
+        $$v_{OO} = C(\eta)e^{\frac{\xi}{4}}$$
+        Методом Лагранжа найдем частное решение неоднородного уравнения
+        $$v_\xi = C_\xi e^{\frac{\xi}{4}} - \frac{1}{4}Ce^{\frac{\xi}{4}} \Rightarrow C_\xi = -\frac{1}{4}C_2(\xi)e^{\frac{\xi}{4}}$$
+        Частное решение:
+        $$v = (-\frac{1}{4}C_3(\xi) + C_4(\eta)) e^{-\frac{\eta}{4}}$$
+        Общее решение однородного уравнения:
+        \begin{align}
+            v &= C(\eta)e^{-\frac{\eta}{4}} + (-\frac{1}{4}C_3(\xi) + C_4(\eta)) e^{-\frac{\eta}{4}} 
+            = ue^{-\frac{1}{8}\xi - \frac{3}{4}\eta} \notag \\ 
+            &= (C_5(\eta) - \frac{1}{4}C_3(\xi))e^{-\frac{\eta}{4}}  \notag \\
+            u &= (C_5(\eta) - \frac{1}{4}C_3(\xi))e^{-\frac{1}{8}\xi-\frac{1}{2}\eta} \notag \\
+            &= (C_5(y-2x) - \frac{1}{4}C_3(y-4x))e^{-\frac{1}{8}(y-4x)-\frac{1}{2}(y-2x)} \notag \\
+            &= (C_5(y-2x) - \frac{1}{4}C_3(y-4x))e^{-\frac{1}{2}x-\frac{3}{8}y} \notag
+        \end{align}
+    \subsection{Используем начальные условия}
+        $$u(x, 2x) = e^{\frac{1}{4}x}(C_5(2x) + C_3(0)) = e^x \Rightarrow C_5(2x) + C_3(0) = xe^{-\frac{1}{2}x}$$
+        $$u(x, 4x) = xe^x = e^{\frac{3}{2}x}(C_5(2x) + C_3(0)) \Rightarrow C_5(0) + C_3(-2x) = e^{\frac{3}{4}x}$$
+        Имеем:
+        \begin{equation*}
+            \begin{cases}
+                C_5(2x) + C_3(0) = xe^{-\frac{1}{2}x} \\
+                C_5(0) + C_3(-2x) = e^{\frac{3}{4}x}
+            \end{cases}
+        \end{equation*}
+        $$C_5(2x) = xe^{-\frac{1}{2}x} - C_3(0) \Rightarrow C_5(t) = \frac{1}{2}te^{-\frac{1}{4}t} - C_3(0)$$
+        $$C_5(0) = -C_3(0)$$
+        $$C_3(-2x) = e^{\frac{3}{4}x} - C_5(0) \Rightarrow C_3(t) = e^{-\frac{3}{8}t} + C_3(0)$$
+        Тогда 
+        $$u = e^{-\frac{1}{8}\xi + \frac{3}{4}\eta}(\frac{1}{2}\eta e^{-\frac{1}{4}\eta} - C_3(0) + e^{-\frac{3}{8}\xi} + C_3(0)) = e^{-\frac{1}{8}\xi + \frac{3}{4}\eta}(\frac{1}{2}\eta e^{-\frac{1}{4}\eta} + e^{-\frac{3}{8}\xi})$$
+        Учтём, что $\xi = y-4x$ и $\eta = y - 2x$:
+        $$u(x,y) = e^{-\frac{1}{2}x + \frac{11}{8}y}((\frac{1}{2}y - x)e^{-2y+x} + e^{-3y+3x})$$
+
+\section{Задание 8. Привести уравнение к каноническому виду и упростить}
+Задача 2.12
+    $$u_{xy} - 2u_{xz} + u_{yz} + u_x + u_y = 0$$
+    \begin{align}
+        a_1a_2 - 2a_1a_3 + a_2a_3 = [a_1 = t_1 - t_2, a_2 = t_1 + t_2, a_3 = t_3] \notag \\
+        (t_1 - t_2)(t_1 + t_2) - 2(t_1 - t_2)t_3 + (t_1 + t_2)t_3 = \notag \\
+        t_1^2 - t_2^2 - t_1t_3 + 3t_2t_3 = (t_1 - \frac{t_3}{2})^2 - (t_2 - \frac{3}{2}t_3)^2 + 2t_3^2 \notag
+    \end{align}
+    
+    Проведем замену $\tau_1 = t_1 - \frac{1}{2}t_3$, $\tau_2 = t_2 - \frac{3}{2}t_3$, $\tau_3 = \sqrt{2}t_3$
+    Выразим 
+    \begin{align}
+        &t_1 = \tau_1 + \frac{1}{2\sqrt{2}}\tau_3& &t_2 = \tau_2 + \frac{3}{2\sqrt{2}}\tau_3& &t_3 = \frac{1}{\sqrt{2}}\tau_3& \notag
+    \end{align}
+    Получим уравнение $\tau_1^2 - \tau_2^2 + \tau_3^2 = 0$
+    
+    Выразим \(a_i\):
+
+    \begin{align}
+        a_1 &= \tau_1 - \tau_2 - \frac{1}{\sqrt{2}}\tau_3 \notag \\
+        a_2 &= \tau_1 + \tau_2 + \sqrt{2}\tau_3 \notag \\
+        a_3 &= \frac{1}{\sqrt{2}}\tau_3 \notag 
+    \end{align}
+
+    \begin{gather*}
+        A = \begin{bmatrix}
+            1 & -1 & -\frac{1}{\sqrt{2}} \\
+            1 & 1 & \sqrt{2} \\
+            0 & 0 & \frac{1}{\sqrt{2}}
+        \end{bmatrix} \quad
+    \end{gather*}
+
+    \begin{gather*}
+        Y = A^T \begin{pmatrix} x \\ y \\ z \end{pmatrix}
+    \end{gather*}
+
+    \begin{equation*}
+        \begin{cases}
+            y_1 = x+y \\
+            y_2 = -x + y \\
+            y_3 = -\frac{1}{\sqrt{2}}x + \sqrt{2}y + \frac{1}{\sqrt{2}}z
+       \end{cases}            
+    \end{equation*}
+
+    Вычислим производные:
+    
+    \begin{align*}
+        u_x &= u_{y_1} - u_{y_2} - \frac{1}{\sqrt{2}}u_{y_3} \\
+        u_y &= u_{y_1} + u_{y_2} + \sqrt{2}u_{y_3} \\
+        u_z &= \frac{1}{\sqrt{2}}u_{y_3}
+    \end{align*}
+    \begin{align*}
+        u_{xy} &= u_{y_1y_1} + \frac{1}{\sqrt{2}}u_{y_1y_3} -u_{y_2y_2} - \frac{3}{\sqrt{2}}u_{y_2y_3} - u_{y_3y_3} \\
+        u_{xz} &= \frac{1}{\sqrt{2}}u_{y_1y_3} - \frac{1}{\sqrt{2}}u_{y_2y_3} - \frac{1}{2}u_{y_3y_3} \\
+        u_{yz} &= \frac{1}{\sqrt{2}}u_{y_1y_3} + \frac{1}{\sqrt{2}}u_{y_2y_3} + u_{y_3y_3}
+    \end{align*}
+
+    Подставим в исходное уравнение и получим:
+    $$u_{y_1y_1} - u_{y_2y_2} - u_{y_3y_3} + 2u_{y_1} +\frac{1}{\sqrt{2}}u_{y_3} = 0$$
+    Проведем замену:
+    $$u = e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3}v(y)$$
+
+    Вычислим производные:
+    \begin{align*}
+        u_{y_1} &= (\alpha_1v + v_{y_1})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3} \\
+        u_{y_2} &= (\alpha_2v + v_{y_2})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3} \\
+        u_{y_2} &= (\alpha_3v + v_{y_3})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3} \\
+        u_{y_1y_1} &= (\alpha_1^2v + 2\alpha_1v_{y_1} + v_{y_1y_1})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3} \\
+        u_{y_2y_2} &= (\alpha_2^2v + 2\alpha_2v_{y_2} + v_{y_2y_2})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3} \\
+        u_{y_3y_3} &= (\alpha_3^2v + 2\alpha_3v_{y_3} + v_{y_3y_3})e^{\alpha_1y_1 + \alpha_2y_2 + \alpha_3y_3}
+    \end{align*}
+    Подставим в полученное уравнение и домножим на $e^{-\alpha_1y_1 - \alpha_2y_2 - \alpha_3y_3}$
+    \newline Получим коэффициенты при производных:
+    \begin{align*}
+        v_{y_1y_1} &: 1 &v_{y_2y_2} &: -1 &v_{y_3y_3} &: -1 \\
+        v_{y_1} &: 2\alpha_1 + 2 &v_{y_2} &: -2\alpha_2 &v_{y_3} &: -2\alpha_3 + \frac{1}{\sqrt{2}} \\
+        v &: \alpha_1^2 - \alpha_2^2 - \alpha_3^2 + 2\alpha_1 + \frac{1}{\sqrt{2}}\alpha_3
+    \end{align*}
+
+    Возьмем следующие значения $\alpha_i$:
+    \begin{align*}
+        &\alpha_1 = -1& &\alpha_2 = 0& &\alpha_3 = \frac{1}{2\sqrt{2}}&
+    \end{align*}
+
+    Имеем:
+    $$(v_{y_1y_1} - v_{y_2y_2} - v_{y_3y_3} - \frac{7}{8}v) = 0$$
+
+\section{Задание 1. №1.5}
+        
+    Решить задачу Коши:
+        
+        \begin{equation*}
+            x\,u_{xx} + (x+y)\,u_{xy} + y\,u_{yy}=0,\quad x>0,\;y>0,
+        \end{equation*}
+        \[
+        u \Big|_{y=\frac{1}{x}} = x^3, \quad \quad  u_{y} \Big|_{y=\frac{1}{x}} = -x^4
+        \]
+        
+        Характеристическое уравнение:
+        \[
+        x\left({dy}\right)^2 - 2(x+y)\left({dy}\cdot{dx}\right) + y\left({dx}\right)^2=0.
+        \]
+        \[
+        x\left(\frac{dy}{dx}\right)^2 - 2(x+y)\left(\frac{dy}{dx}\right) + y=0.
+        \]
+        Подстановка $t = \frac{dy}{dx}$:
+        \[
+        xt^2 - 2(x+y)t + y=0.
+        \]
+        Дискриминант $D = (x+y)^2 - 4xy = (x-y)^2> 0 \Rightarrow$ уравнение гиперболического типа.
+        
+        Решение уравнения:
+        \begin{equation*}
+            \begin{cases}
+            t_1 = \frac{y}{x} \\
+            t_2 = 1
+            \end{cases}
+        \end{equation*}
+        
+        \begin{align*}
+            &t_1 = \frac{y}{x}: \quad y = xC_1 \\
+            &t_2 = 1: \quad y = x + C_2
+        \end{align*}
+        
+        \begin{align*}
+            \xi &= \frac{y}{x} , \quad \xi_x = -\frac{y}{x^2},  \quad \xi_y = \frac{1}{x},   \quad  \xi_{xx} = \frac{2y}{x^3},  \quad  \xi_{xy} = -\frac{1}{x^2} \\
+            \eta &= y - x, \quad \eta_x = -1,  \quad \eta_y = 1
+        \end{align*}
+        
+        Преобразование производных:
+        
+        \begin{align*}
+        u_x &= -\frac{y}{x^2} u_{\xi} - u_{\eta} \\
+        u_y &=\frac{1}{x} u_{\xi} + u_{\eta} \\
+        u_{xx} &= \frac{y^2}{x^4} u_{\xi\xi} + \frac{2y}{x^2} u_{\xi\eta}  + u_{\eta\eta} + \frac{2y}{x^3} u_{\xi} \\
+        u_{xy} &= -\frac{y}{x^3} u_{\xi\xi} + u_{\xi\eta} (-\frac{y}{x^2} - \frac{1}{x}) - u_{\eta\eta} - \frac{1}{x^2} u_{\xi} \\
+        u_{yy} &= \frac{1}{x^2} u_{\xi\xi} + \frac{2}{x} u_{\xi\eta}  + u_{\eta\eta} 
+        \end{align*}
+        
+        
+        Вычислим коэффициенты:
+        \begin{flushleft}
+        \(
+        \begin{array}{rcl}
+        u_{\xi} & : & \frac{2y}{x^3}x-\frac{1}{x^2}(x+y)= \frac{(y-x)}{x^2}\\
+        u_{\eta} & : & 0 \\
+        u_{\xi\xi} & : & \frac{y^2}{x^3}-\frac{y(x+y)}{x^3}+\frac{y}{x^2} = 0\\
+        u_{\xi\eta} & : &  \frac{2y}{x}+(x+y)(-\frac{y}{x^2} - \frac{1}{x}) + \frac{2y}{x} = -\frac{(y-x)^2}{x^2}\\
+        u_{\eta\eta} & : & x - (x+y) + y = 0
+        \end{array}
+        \)
+        \end{flushleft}
+
+        Обратная замена:
+        \begin{align*}
+            x &= \frac{\eta}{\xi - 1}, \quad \quad y = \frac{\xi\eta}{\xi - 1}
+        \end{align*}
+        Имеем:
+        \begin{align*}
+            -\frac{(y-x)^2}{x^2}u_{\xi\eta} + \frac{(y-x)}{x^2}u_{\xi} &= 0 \\
+            u_{\xi\eta} - \frac{1}{y - x}u_{\xi} &= 0 \\
+            u_{\xi\eta} - \frac{1}{\eta}u_{\xi} &= 0
+        \end{align*}
+        Замена $u_{\xi}=v$:
+        \begin{equation*}
+            \frac{dv}{d\eta} =\frac{v}{\eta}
+        \end{equation*}
+        \begin{equation*}
+            v_{\eta} - \frac{1}{\eta}v = 0
+        \end{equation*}
+        \begin{equation*}
+        \ln v =\ln \eta + C
+        \end{equation*}
+        \begin{equation*}
+        v =\eta \cdot C(\xi)
+        \end{equation*}
+        Тогда:
+        \begin{equation*}
+            u_{\xi} = \eta \cdot C(\xi)
+        \end{equation*}
+        \begin{equation*}
+            u = \int \eta \cdot C(\xi) d\xi + C(\eta)
+        \end{equation*}
+        \begin{equation*}
+            u = \eta \cdot C_1(\xi)+ C_2(\eta)
+        \end{equation*}
+        Обратная замена:
+        \begin{equation*}
+            u = (y-x) \cdot C_1(\frac{y}{x})+ C_2(y-x)
+        \end{equation*}
+        Используем начальные условия, подставим $ y = \frac{1}{x} $ в выражение для $ u(x,y) $:
+        \begin{equation*}
+            \left( \frac{1}{x} - x \right) C_1 \left( \frac{1}{x^2} \right) + C_2 \left( \frac{1}{x} - x \right) =x^3
+        \end{equation*}
+        Тогда
+        \begin{equation*}
+            \xi = y - x = \frac{1 - x^2}{x}, \quad \eta = \frac{y}{x} = \frac{1}{x^2}.
+        \end{equation*}
+        Уравнение принимает вид:
+        \begin{equation*}
+            \xi C_1(\eta) + C_2(\xi) = x^3
+        \end{equation*}
+        Из второго условия:
+        \begin{equation*}
+             C_1(\eta) + \frac{1 - x^2}{x^2} C_1'(\eta) + C_2'(\xi) = -x^4
+        \end{equation*}
+        Проведем замену: $ s = \xi $, $ t = \eta $ и выразим $ x $ через $ t $:
+        \begin{equation*}
+            x = \frac{1}{\sqrt{t}}, \quad s = \frac{t - 1}{\sqrt{t}}
+        \end{equation*}
+        Запишем уравнения в терминах $ t $:
+        \begin{align*}
+            C_2(s) + s C_1(t) &= \frac{1}{t^{3/2}},\\
+            C_2'(s) + C_1(t) + (t - 1) C_1'(t) &= -\frac{1}{t^2}
+        \end{align*}
+        Решим систему уравнений.
+
+
+        1. Выразим $ C_2(s) $:
+        \begin{equation*}
+            C_2(s) = \frac{1}{t^{3/2}} - s C_1(t).
+        \end{equation*}
+        
+     2. Подставим это выражение:
+        \begin{equation*}
+            \left( \frac{1}{t^{3/2}} - s C_1(t) \right)' + C_1(t) + (t - 1) C_1'(t) = -\frac{1}{t^2}.
+        \end{equation*}
+        
+        Так как $ s = \frac{t - 1}{\sqrt{t}} $, имеем $ ds/dt = \frac{(t - 1)' \sqrt{t} - (t - 1) (\sqrt{t})'}{t} = \frac{\sqrt{t} - \frac{t - 1}{2 \sqrt{t}}}{t} $, что упрощается до $ ds/dt = \frac{t + 1}{2t \sqrt{t}} $.
+     
+     3. Производная $ C_2(s) $ будет:
+        \begin{equation*}
+            C_2'(s) = \left( \frac{1}{t^{3/2}} - s C_1(t) \right)' = -\frac{3}{2} t^{-5/2} - \frac{t + 1}{2t \sqrt{t}} C_1(t) - s C_1'(t).
+        \end{equation*}
+        
+        Подставляя это, получаем
+        \begin{equation*}
+            -\frac{3}{2} t^{-5/2} - \frac{t + 1}{2t \sqrt{t}} C_1(t) - s C_1'(t) + C_1(t) + (t - 1) C_1'(t) = -\frac{1}{t^2}.
+        \end{equation*}
+     
+     4. Переписываем уравнение:
+        \begin{equation*}
+            (t - 1 - s) C_1'(t) + \left(1 - \frac{t + 1}{2t \sqrt{t}} \right) C_1(t) = -\frac{1}{t^2} + \frac{3}{2} t^{-5/2}.
+        \end{equation*}
+        
+        Так как $ s = \frac{t - 1}{\sqrt{t}} $, имеем $ t - 1 - s = \frac{(t - 1)(\sqrt{t} - 1)}{\sqrt{t}} $.
+        
+     5. Разделяем переменные и интегрируем уравнение относительно $ C_1(t) $:
+        \begin{equation*}
+            C_1'(t) = \frac{1}{t^2} - \frac{1}{(t - 1)^2}.
+        \end{equation*}
+        
+        Интегрируя, находим
+        \begin{equation*}
+            C_1(t) = \frac{1}{t - 1} - \frac{1}{t}.
+        \end{equation*}
+        
+     6. Подставляем $ C_1(t) $ в уравнение для $ C_2(s) $ и находим $ C_2(s) = 0 $.
+     
+     Подставляя найденные функции, получаем решение:
+     \begin{equation*}
+         u(x,y) = \frac{x^2}{y}.
+     \end{equation*}
+     \textbf{Ответ:} $u =\frac{x^2}{y}$.
+             
+\end{document}

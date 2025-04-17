@@ -1,0 +1,3 @@
+﻿  BFS.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\graphs\BFS\BFS\BFS.cpp(17,6): warning C4101: 'tmp': unreferenced local variable
+  BFS.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\graphs\BFS\x64\Debug\BFS.exe

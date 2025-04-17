@@ -1,0 +1,15 @@
+﻿  LCS.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\LCS\LCS.cpp(8,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\LCS\LCS.cpp(9,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\LCS\LCS.cpp(72,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\LCS\LCS.cpp(80,55): warning C4244: '=': conversion from '__int64' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\LCS\LCS.cpp(86,55): warning C4244: '=': conversion from '__int64' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  LCS.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\LCS\x64\Debug\LCS.exe

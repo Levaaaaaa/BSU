@@ -1,0 +1,6 @@
+﻿  suffix_array.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\string_operations\suffix_array\suffix_array\suffix_array.cpp(73,21): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+D:\Leva\BSU\course_2\sem_4\AiSD\string_operations\suffix_array\suffix_array\suffix_array.cpp(76,22): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+D:\Leva\BSU\course_2\sem_4\AiSD\string_operations\suffix_array\suffix_array\suffix_array.cpp(100,32): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+D:\Leva\BSU\course_2\sem_4\AiSD\string_operations\suffix_array\suffix_array\suffix_array.cpp(100,64): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  suffix_array.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\string_operations\suffix_array\x64\Debug\suffix_array.exe

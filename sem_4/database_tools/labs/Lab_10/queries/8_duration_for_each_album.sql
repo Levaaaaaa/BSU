@@ -1,0 +1,1 @@
+select a_name, duration from album join (select t_album, sum(t_duration) as duration from tracks group by t_album) as one_album on one_album.t_album = a_id;

@@ -1,0 +1,1 @@
+insert [Snezhko_gr2_LR_8].dbo.usp_17 (UNUM, OCENKA, UDATE, SNUM, PNUM) select * from [2_2-Снежко].dbo.USP;

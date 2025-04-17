@@ -1,0 +1,4 @@
+﻿  Huffman_Code.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\Heap\Huffman_Code\Huffman_Code\Huffman_Code.cpp(64): warning C4715: 'MyQueue::front': not all control paths return a value
+D:\Leva\BSU\course_2\sem_4\AiSD\Heap\Huffman_Code\Huffman_Code\Huffman_Code.cpp(50): warning C4715: 'MyQueue::pop': not all control paths return a value
+  Huffman_Code.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\Heap\Huffman_Code\x64\Debug\Huffman_Code.exe

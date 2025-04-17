@@ -1,0 +1,3 @@
+﻿  0_4_SumTask.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\Heap\0_4_SumTask\0_4_SumTask\0_4_SumTask.cpp(36,14): warning C4244: 'initializing': conversion from 'double' to '__int64', possible loss of data
+  0_4_SumTask.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\Heap\0_4_SumTask\x64\Debug\0_4_SumTask.exe

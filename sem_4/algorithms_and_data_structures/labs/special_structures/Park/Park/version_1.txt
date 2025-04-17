@@ -1,0 +1,306 @@
+// Park.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+/*
+	ДОБАВИТЬ СЖАТИЕ КООРДИНАТ Х!!!
+	создадим массив compress_x, отсортируем, удалим повторяющиеся элементы
+	переделать прочие массивы под сжатые координаты
+	каждый раз, когда нужна координата, искать её в массиве дихотомией
+
+	??? Вопрос: как сжатие координат экономит время? 
+	Без него обращение к координате - константа O(1), с ним - O(log(n))
+	Если он жертвует временем ради выигрыша в памяти, то зачем использовать, ведь память неограничена
+*/
+
+/*
+	Ещё идеи: завести массив, в котором по индексу y будет сохранено количество деревьев с таким y
+				Это пригодится для ускорения посещения всех деревьев с заданным y (y_max в частности)
+				Также в max_delta_x не стоит учитывать деревья, которые лежат ниже y_min
+				Для поиска таких деревьев на каждой итерации также может пригодится массив y_counts
+*/
+/*
+* 5.04.24
+* 
+	Ошибки WA устранены. Нужно ускорить алгоритм. На данном этапе не проходит 11/24 тестов, все TLE
+	Асимптотика на данном этапе: O((h + w) * n^2)
+	Суть алгоритма:
+		1. выставляем y_min на максимальное значение - h - 1
+O(n)	2. в цикле: опускаем его по уникальным значениям y - O(n)
+			для каждого фиксированного y_min:
+	O(n)	2.1	удаляем деревья, координаты y которых меньше, чем y_min, т.к. они не мешают площадке, ограниченной y_min и y_max - 
+					ВАЖНО: удаление деревьев временное, деревья лишь помечаются как удалённые и будут восстановлены для следующего y_min
+			2.2	выставляем значение y_max на максимум - h
+	O(h)	2.3	в цикле: опускаем y_max пока оно не совпадёт с заранее зафиксированным y_min - O(h)
+				для каждой фиксированной пары y_min, y_max:
+		O(w)	2.3.1 в цикле: обходим все деревья, координата y которых совпадает с y_max
+						для каждого дерева:
+						2.3.1.1 фиксируем координату х этого дерева
+						2.3.1.2 проверяем, есть ли на площадке еще деревья с таким х
+								если есть - уменьшаем их количество и переходим к следующему дереву
+								иначе идём дальше
+						2.3.1.3	на площадке больше нет деревьев с данным х. Нужно пересчитать max_delta_x, 
+								т.к. между какими-то теперь соседними х расстояние увеличилось.
+								Нужно найти правого и левого соседа по х удаляемого дерева
+								будем идти от удаляемой вершины по списку list_x вправо и влево и проверять, удалены ли деревья, которые мы посещаем
+								так идём до первого неудалённого справа и первого неудалённого слева
+						O(w)	это цикл
+
+						ЗАМЕЧАНИЕ: c одной стороны мы лишаем себя преимуществ связного списка не используя удаление, а лишь помечая деревья в булевом векторе
+									но с другой стороны список ведь работает непосредственно с памятью и если мы удалим элемент списка по указателю,
+									то изменится список в глобальной области видимости.
+									Тогда мы не сможем его восстановить для другой итерации (при новом y_min)
+								
+						
+						Нужно сделать:
+							- убрать isDeleteTree, в main() завести копию list_x и восстанавливать на каждой итерации
+							- добавить сжатие координат
+*/
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <list>
+
+using namespace std;
+
+int h, w;
+
+int delete_tree(
+	int x, 
+	vector<int> &x_counts, 
+	vector<list<int>::iterator> nodes, 
+	list<int> list_x, 
+	vector<bool> &isDeletedTree, 
+	int max_delta_x
+) 
+{
+	if (x_counts[x] > 0) {
+		x_counts[x]--;
+	}
+	if (x_counts[x] == 0) {
+		list<int>::iterator cur = nodes[x];
+		//найдем соседей по х удаляемого дерева
+		int left_x, right_x;
+
+		int counter = 0;
+		do {
+			if (*cur == list_x.front()) {
+				left_x = 0;
+				break;
+			}
+			else {
+				/*
+				int counter = 0;
+
+				do {
+					--cur;
+					counter++;
+				} while (isDeletedTree[*cur]);
+				*/
+				--cur;
+				counter++;
+				left_x = *cur;
+			}
+		} while (isDeletedTree[*cur]);
+		for (int i = 0; i < counter; i++) {
+			cur++;
+		}
+
+		counter = 0;
+		do {
+			if (*cur == list_x.back()) {
+				right_x = w;
+				break;
+			}
+			else {
+				/*
+				int counter = 0;
+				do {
+					cur++;
+					counter++;
+				} while (isDeletedTree[*cur]);
+				*/
+				cur++;
+				counter++;
+				right_x = *cur;
+			}
+		} while (isDeletedTree[*cur]);
+		for (int i = 0; i < counter; i++) {
+			cur--;
+		}
+		//не получается удалить элемент из списка
+		// вынужден завести бинарный вектор состояний деревьев: удалено/не удалено
+		// нужно было решить проблему восстановления списка значений х после изменения y_min и сброса y_max на значение h
+		// в связи с этим идея бинарного вектора состояний кажется адекватной
+//				list_x.erase(nodes[x]);
+		if ((right_x - left_x) > max_delta_x) {
+			max_delta_x = right_x - left_x;
+		}
+
+		isDeletedTree[x] = true;
+	}
+
+	return max_delta_x;
+}
+long long calc_max_space
+(
+	vector<pair<int, int>> trees,
+	int y_min,
+	list<int> list_x,
+	vector<list<int>::iterator> nodes,
+	vector<int> x_counts,
+	int max_delta_x,
+	vector<bool> isDeletedTree,
+	int global_result
+) 
+{
+	for (int i = 0; i < trees.size(); i++) {
+		if (trees[i].second <= y_min) {
+			max_delta_x = delete_tree(trees[i].first, x_counts, nodes, list_x, isDeletedTree, max_delta_x);
+		}
+	}
+
+	int y_max;
+	int x = INT_MAX;
+	//опускаем верхнюю границу
+	for (y_max = h; y_max > y_min; --y_max) {
+		//для всех деревьев, выпадающих из площадки на текущей итерации (выше верхней границы, но которые не удалялись ранее)
+		for (int j = 0; j < trees.size() && trees[j].second >= y_max; j++) {
+			if (x_counts[trees[j].first] <= 0 || trees[j].second != y_max) {
+				continue;
+			}
+			x = trees[j].first;
+			max_delta_x = delete_tree(x, x_counts, nodes, list_x, isDeletedTree, max_delta_x);
+		}
+		if ((y_max - y_min) * max_delta_x > global_result) {
+			global_result = (y_max - y_min) * max_delta_x;
+		}
+ 	}
+	return global_result;
+}
+
+int main()
+{
+	int n;
+	ifstream in("input.txt");
+	in >> n >> w >> h;
+
+	vector<pair<int, int>> trees(n);
+	list<int> list_x(0);
+	int tmp_x, tmp_y;
+	int count = 0;
+	for (int i = 0; i < n; i++) {
+		in >> tmp_x >> tmp_y;
+		//нет смысла рассматривать деревья, которые находятся на границе парка, т.к. они не ограничивают площадку
+		if (tmp_x != 0 && tmp_x != w && tmp_y != 0 && tmp_y != h) {
+			trees[count].first = tmp_x;
+			trees[count].second = tmp_y;
+			count++;
+		}
+	}
+	trees.resize(count);
+	in.close();
+
+	//сортируем деревья по убыванию у
+	sort(trees.begin(), trees.begin() + trees.size(), [](pair<int, int> p1, pair<int, int> p2) {return p1.second > p2.second; });
+	int counter = 0;
+
+	//формируем список х
+	for (int i = 0; i < trees.size(); i++) {
+		list_x.push_back(trees[i].first);
+	}
+
+
+	//сортируем список по возрастанию х
+	list_x.sort();
+	
+	if (list_x.empty()) {
+		ofstream out("output.txt");
+		out << w * h;
+		out.close();
+		return 0;
+	}
+	//сохраним число деревьев с каждым х, а затем удалим повторяющиеся х из списка
+	vector<list<int>::iterator> nodes(w);
+	vector<int> x_counts(w, 0);
+
+	
+
+	//есть вероятность, что я неправильно формирую массив nodes. Данные в массиве искажаются за счет постоянного изменения итератора cur
+	list<int>::iterator cur = list_x.begin();
+	//int unique_x_count = list_x.size();
+	while (cur != list_x.end()) {
+//		list<int>::iterator p = list<int>::iterator(cur);
+		x_counts[*cur]++;
+		cur++;
+	}
+
+	//убираем повторяющиеся значения х из списка
+	int cur_x = list_x.front();
+	list<int>::iterator cur_beg = list_x.begin();
+	for (cur_beg = list_x.begin(); cur_beg != list_x.end(); cur_beg++) {
+		cur_x = *cur_beg;
+		cur = cur_beg;
+		cur++;
+		while (list_x.size() != 1 && cur != list_x.end() && cur_x == *cur) {
+			list_x.erase(cur);
+			cur = cur_beg;
+			cur++;
+		}
+	}
+
+	cur = list_x.begin();
+	vector<bool> isDeleted(w, true);
+	while (cur != list_x.end()) {
+		list<int>::iterator p(cur);
+		isDeleted[*p] = false;
+		nodes[*p] = p;
+		cur++;
+	}
+	//найдем максимальную разницу по х между деревьями
+	int max_delta_x = list_x.front();
+	cur = list_x.begin();
+	int x_prev = *cur;
+	int x_cur;
+	cur++;
+	for (; cur != list_x.end(); cur++) {
+		x_cur = *cur;
+		if (max_delta_x < x_cur - x_prev) {
+			max_delta_x = x_cur - x_prev;
+		}
+		x_prev = x_cur;
+	}
+	if (w - list_x.back() > max_delta_x) {
+		max_delta_x = w - list_x.back();
+	}
+
+	//предварительная подготовка завершена, начинаем алгоритм
+	/*
+		будем в цикле идти по уникальным значениям у, уменьшать число деревьев, находящихся на площадке и обновлять площадь
+	*/
+	int tmp_count;
+	int y_min = trees[0].second, y_max = h;
+	long long result = (y_max - y_min) * max_delta_x;
+	for (int i = 0; i < trees.size(); i++) {
+		if (y_min == trees[i].second) {		//обеспечить уникальность у
+			continue;
+		}
+		y_min = trees[i].second;
+
+		//достаём бубен
+
+		result = calc_max_space(trees, y_min, list_x, nodes, x_counts, max_delta_x, isDeleted, result);
+				
+	}
+
+	//обработать когда у совпадает с нижней границей (аналогично выше)
+	y_min = 0;
+	result = calc_max_space(trees, y_min, list_x, nodes, x_counts, max_delta_x, isDeleted, result);
+		
+
+	ofstream out("output.txt");
+	out << result;
+	out.close();
+	return 0;
+}

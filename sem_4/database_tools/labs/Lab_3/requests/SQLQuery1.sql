@@ -1,0 +1,1 @@
+SELECT * FROM TEACHERS WHERE TFAM = 'Казанко' OR TFAM = 'Казанков' OR TFAM = 'Козанко';

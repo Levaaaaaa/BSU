@@ -1,0 +1,5 @@
+﻿  Park.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\Park\Park\Park.cpp(238,70): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\Park\Park\Park.cpp(324,26): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\Park\Park\Park.cpp(335,25): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  Park.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\Park\x64\Debug\Park.exe

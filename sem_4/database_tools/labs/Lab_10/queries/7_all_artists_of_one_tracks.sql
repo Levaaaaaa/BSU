@@ -1,0 +1,2 @@
+select b_name from bands join (select art_band from artist join (select g_artist from guest group by g_track, g_artist having g_track = (select t_id from tracks where t_name = 'track_1')) as ar on art_id = ar.g_artist
+) as band on band.art_band = b_id;

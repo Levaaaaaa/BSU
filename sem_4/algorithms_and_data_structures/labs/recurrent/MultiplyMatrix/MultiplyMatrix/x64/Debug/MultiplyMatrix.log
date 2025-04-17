@@ -1,0 +1,4 @@
+﻿  MultiplyMatrix.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\MultiplyMatrix\MultiplyMatrix\MultiplyMatrix.cpp(10,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\MultiplyMatrix\MultiplyMatrix\MultiplyMatrix.cpp(51,6): warning C4101: 'index': unreferenced local variable
+  MultiplyMatrix.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\MultiplyMatrix\x64\Debug\MultiplyMatrix.exe

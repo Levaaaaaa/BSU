@@ -1,0 +1,1 @@
+select * from album where a_year < 2005 and a_year > 2000;

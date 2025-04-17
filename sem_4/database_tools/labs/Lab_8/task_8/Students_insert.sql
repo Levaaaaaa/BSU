@@ -1,0 +1,1 @@
+INSERT [Snezhko_gr2_LR_8].dbo.students_17 select * from [2_2-Снежко].dbo.STUDENTS;

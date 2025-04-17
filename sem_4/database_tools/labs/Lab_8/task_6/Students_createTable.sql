@@ -1,0 +1,7 @@
+create table students_17 (
+	SNUM INT NOT NULL, 
+	SFAM NCHAR(20),
+	SIMA NCHAR(10),
+	SOTH NCHAR(15),
+	STIP MONEY
+);

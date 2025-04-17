@@ -1,0 +1,1 @@
+select * from musicians where YEAR(m_birth_date) < 1970 and YEAR(m_birth_date) > 1940;

@@ -1,0 +1,116 @@
+// shooting.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <vector>
+#include <list>
+#include <queue>
+#include <algorithm>
+#include <fstream>
+#include <deque>
+
+using namespace std;
+
+int CONNECTED = -1;
+int NOEDGES = -2;
+int STOP = -3;
+
+void connectivity(int currentV, int previousV, vector<bool>& connected, vector<int>& result, vector<list<pair<int, int>>>& g) {
+	connected[currentV] = true;
+	for (pair<int, int> adjacentV : g[currentV]) {
+		if (adjacentV.second == previousV && !connected[adjacentV.first]) {
+			result[adjacentV.second] = adjacentV.first;
+			connectivity(adjacentV.first, adjacentV.second, connected, result, g);
+		}
+
+		if (connected[adjacentV.first] && result[adjacentV.second] == NOEDGES) {
+			result[adjacentV.second] = adjacentV.first;
+		}
+	}
+}
+
+int dfs(int currentV, int previousV, vector<bool>& connected, vector<bool>& visited, vector<int>& result, vector<list<pair<int, int>>>& g, deque<int>& componentV) {
+	visited[currentV] = true;
+	for (pair<int, int> adjacentV : g[currentV]) {
+		if (adjacentV.second != previousV) {
+			if (visited[adjacentV.first]) {
+				result[adjacentV.second] = adjacentV.first;
+				componentV.push_back(adjacentV.first);
+
+				return adjacentV.first;
+			}
+
+			int tmpV = dfs(adjacentV.first, adjacentV.second, connected, visited, result, g, componentV);
+
+			if (tmpV == STOP) {
+				return STOP;
+			}
+
+			if (tmpV != NOEDGES && tmpV != CONNECTED) {
+				result[adjacentV.second] = adjacentV.first;
+				connected[adjacentV.first] = true;
+				componentV.push_back(adjacentV.first);
+
+				if (tmpV == currentV) {
+					return tmpV;
+				}
+				else {
+					while (!componentV.empty()) {
+						connectivity(componentV.back(), NOEDGES, connected, result, g);
+						componentV.pop_back();
+					}
+					return CONNECTED;
+				}
+			}
+			if (tmpV == CONNECTED) {
+				return CONNECTED;
+			}
+		}
+	}
+
+	if (previousV == NOEDGES) {
+		ofstream out("output.txt");
+		out << "No";
+		out.close();
+		return STOP;
+	}
+
+	return NOEDGES;
+}
+int main() {
+	int R, C;
+	ifstream in("input.txt");
+	in >> R >> C;
+
+	R++;
+	C++;
+	vector<list<pair<int,int>>> g(R, list<pair<int,int>>());
+	int u, v;
+	vector<int> result(C);
+	for (int i = 1; i < C; i++) {
+		in >> u >> v;
+		g[u].push_back(pair<int, int>(v, i));
+		g[v].push_back(pair<int, int>(u, i));
+		result[i] = NOEDGES;
+	}
+
+	vector<bool> visited(R, false);
+	vector<bool> connected(R, false);
+	deque<int> componentV;
+
+	int status;
+	for (int i = 1; i < R; i++) {
+		if (!(visited[i] || connected[i])) {
+			status = dfs(i, NOEDGES, connected, visited, result, g, componentV);
+			if (status == STOP) {
+				return 0;
+			}
+		}
+	}
+
+	ofstream out("output.txt");
+	for (int i = 1; i < C; i++) {
+		out << result[i] << " ";
+	}
+	return 0;
+}

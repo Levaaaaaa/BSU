@@ -1,0 +1,6 @@
+﻿  destroy_ways_2.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\destroy_ways_2\destroy_ways_2\destroy_ways_2.cpp(76,22): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\destroy_ways_2\destroy_ways_2\destroy_ways_2.cpp(88,13): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\destroy_ways_2\destroy_ways_2\destroy_ways_2.cpp(60,9): warning C4101: 'v': unreferenced local variable
+D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\destroy_ways_2\destroy_ways_2\destroy_ways_2.cpp(60,6): warning C4101: 'u': unreferenced local variable
+  destroy_ways_2.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\special_structures\destroy_ways_2\x64\Debug\destroy_ways_2.exe

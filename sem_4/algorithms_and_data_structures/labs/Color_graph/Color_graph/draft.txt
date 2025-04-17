@@ -1,0 +1,249 @@
+// Color_graph.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <fstream>
+#include <list>
+#include <vector>
+#include <algorithm>
+#include <stack>
+
+using namespace std;
+
+//vector<list<int>> g;
+vector<vector<bool>> adjacent_matrix;
+vector<int> colored_graph;
+int record;
+int n;
+
+list<list<int>> cliques_list;
+vector<vector<int>> cliques;
+
+vector<list<int>> cliques_by_vertex;
+
+vector<bool> visited_clique;
+
+vector<vector<int>> local_cliques_colors;
+
+void build_cliques_by_vertex() {
+	for (int clique = 0; clique < cliques.size(); clique++) {
+		for (int vertex : cliques[clique]) {
+			cliques_by_vertex[vertex].push_back(clique);
+		}
+	}
+}
+
+//wrong не содержит вершины, смежной со всеми вершинами candidates
+bool check(list<int> candidates, list<int> wrong) {
+	for (int i : wrong) {
+		bool q = false;
+		for (int j : candidates) {
+			if (!adjacent_matrix[i][j]) {
+				q = true;		//не смежна хотя бы с одной вершиной candidates
+				break;
+			}
+		}
+		if (!q) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+void bron_kerbosch(list<int> compsub, list<int> candidates, list<int> wrong) {
+	while (!candidates.empty() && check(candidates, wrong)) {
+		int v = candidates.front();
+		compsub.push_back(v);
+		list<int> new_candidates = list<int>();
+		list<int> new_wrong = list<int>();
+		for (int vertex : candidates) {
+			if (adjacent_matrix[v][vertex] && vertex != v) {
+				new_candidates.push_back(vertex);
+			}
+		}
+
+		for (int vertex : wrong) {
+			if (adjacent_matrix[v][vertex] && vertex != v) {
+				new_wrong.push_back(vertex);
+			}
+		}
+
+		if (new_candidates.empty() && new_wrong.empty()) {
+			//compsub is clique
+			cliques_list.push_back(compsub);
+			//return;
+		}
+		else {
+			bron_kerbosch(compsub, new_candidates, new_wrong);
+		}
+		const int tmp = v;
+		compsub.remove(tmp);
+		candidates.remove(tmp);
+		wrong.push_back(v);
+	}
+}
+
+vector<vector<int>> create_clique_vector(list<list<int>> cliques_list) {
+	vector<vector<int>> result = vector<vector<int>>(cliques_list.size());
+	int i = 0;
+	for (list<int> clique : cliques_list) {
+		vector<int> v = vector<int>(clique.size());
+		int j = 0;
+		for (int vertex : clique) {
+			v[j++] = vertex;
+		}
+		sort(v.begin(), v.end());
+		result[i] = v;
+		i++;
+	}
+
+	sort(result.begin(), result.end(), [](vector<int> clique1, vector<int> clique2) {return clique1.size() > clique2.size(); });
+	return result;
+}
+
+
+vector<int> paint_clique(int clique) {
+	//если клика уже окрашена, перекрашивать не надо
+	bool is_already_painted = true;
+	for (int vertex : cliques[clique]) {
+		if (!colored_graph[vertex]) {
+			is_already_painted = true;
+		}
+	}
+
+	if (is_already_painted) {
+		return colored_graph;
+	}
+
+	vector<int> result = vector<int>(n,0);
+	int color = 1;
+	for (int vertex : cliques[clique]) {
+		result[vertex] = color++;
+	}
+
+	return result;
+}
+
+bool check_type_2_conflict(int clique) {
+	vector<int> clique_colors = local_cliques_colors[clique];
+
+	sort(clique_colors.begin(), clique_colors.end());
+
+	int prev = clique_colors[0];
+	for (int i = 1; i < n; i++) {
+		if (prev != 0 && prev == clique_colors[i]) {
+			//есть конфликт
+			return true;
+		}
+	}
+
+	return false;
+}
+
+//return colors without conflicts
+vector<int> solve_type_1_conflict(int clique1, int clique2) {
+	for (int conflict_vertex = 1; conflict_vertex < n; conflict_vertex++) {
+		if (local_cliques_colors[clique1][conflict_vertex] != 0
+			&& local_cliques_colors[clique2][conflict_vertex] != 0
+			&& local_cliques_colors[clique1][conflict_vertex] != local_cliques_colors[clique2][conflict_vertex]) {
+			//если есть конфликт типа 1
+			int min_clique, max_clique;
+			if (cliques[clique1].size() > cliques[clique2].size()) {
+				min_clique = clique2;
+				max_clique = clique1;
+			}
+			else {
+				min_clique = clique1;
+				max_clique = clique2;
+			}
+
+			//пробуем перекрасить меньшую клику
+			int color_buffer = local_cliques_colors[min_clique][conflict_vertex];
+			local_cliques_colors[min_clique][conflict_vertex] = local_cliques_colors[max_clique][conflict_vertex];
+			if (check_type_2_conflict(min_clique)) {
+				//есть конфликт второго типа
+				// откатить изменения
+				local_cliques_colors[min_clique][conflict_vertex] = color_buffer;
+
+			}
+			//конфликт решён
+		}
+	}
+}
+vector<int> paint_graph(int start_clique) {
+	vector<int> result = vector<int>(n, 0);
+	stack<int> cliques_for_processing = stack<int>();
+
+	cliques_for_processing.push(start_clique);
+
+	while (!cliques_for_processing.empty()) {
+		int current_clique = cliques_for_processing.top();
+		cliques_for_processing.pop();
+
+		visited_clique[current_clique] = true;
+
+		for (int vertex : cliques[current_clique]) {
+			for (int adj_clique : cliques_by_vertex[vertex]) {
+				if (!visited_clique[adj_clique]) {
+					cliques_for_processing.push(adj_clique);
+				}
+			}
+		}
+
+		vector<int> local_colors = paint_clique(current_clique);
+
+		//solve conflicts
+		vector<int> tmp_colors = solve_type_1_conflict()
+
+	}
+}
+
+int main()
+{
+	std::ios_base::sync_with_stdio(false);
+	ifstream in("colgraph.in");
+
+	in.tie(nullptr);
+
+	in >> n;
+	n++;
+	//g = vector<list<int>>(n);
+	adjacent_matrix = vector<vector<bool>>(n, vector<bool>(n, false));
+	//record = n;
+	record = 0;
+	colored_graph = vector<int>(n, 0);
+	int u, v;
+	cliques_by_vertex = vector<list<int>>(n, list<int>());
+	while (!in.eof()) {
+		in >> u >> v;
+		/*
+		g[u].push_back(v);
+		g[v].push_back(u);
+		*/
+		adjacent_matrix[u][v] = true;
+		adjacent_matrix[v][u] = true;
+	}
+
+	in.close();
+
+	list<int> candidates = list<int>();
+	for (int i = 1; i < n; i++) {
+		candidates.push_back(i);
+	}
+	bron_kerbosch(list<int>(), candidates, list<int>());
+	
+	cliques = create_clique_vector(cliques_list);
+	build_cliques_by_vertex();
+	visited_clique = vector<bool>(cliques.size(), false);
+	local_cliques_colors = vector<vector<int>>(cliques.size(), vector<int>(n, 0));
+
+	paint_graph(0);
+
+	ofstream out("colgraph.out");
+	out.tie(nullptr);
+	out << record << "\n";
+	
+	out.close();
+	return 0;
+}

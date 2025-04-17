@@ -1,0 +1,1 @@
+insert [Snezhko_gr2_LR_8].dbo.predmets_17(PNUM, PNAME, TNUM, HOURS, COURSE) select PNUM, PNAME, TNUM, HOURS, COURSE from [2_2-Снежко].dbo.PREDMETS;

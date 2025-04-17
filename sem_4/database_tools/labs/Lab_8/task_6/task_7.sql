@@ -1,0 +1,1 @@
+insert into Snezhko_gr2_LR_8.dbo.students_17 select oldS.SNUM, oldS.SFAM, oldS.SIMA, oldS.SOTH, oldS.STIP from [2_2-Снежко].DBO.STUDENTS as oldS join [2_2-Снежко].dbo.USP on [2_2-Снежко].dbo.USP.SNUM = oldS.SNUM where [2_2-Снежко].dbo.USP.OCENKA = 5;

@@ -1,0 +1,7 @@
+﻿  ChristmasToy.cpp
+D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\ChristmasToy\ChristmasToy\ChristmasToy.cpp(40,21): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=__int64
+          ]
+  ChristmasToy.vcxproj -> D:\Leva\BSU\course_2\sem_4\AiSD\recurrent\ChristmasToy\x64\Debug\ChristmasToy.exe

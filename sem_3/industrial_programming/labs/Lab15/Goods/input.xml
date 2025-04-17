@@ -1,0 +1,12 @@
+<goodsSet>
+    <goods>
+        <name>goods1_xml</name>>
+        <country>Switzerland</country>
+        <count>1</count>
+    </goods>
+    <goods>
+        <name>goods2_xml</name>>
+        <country>Japan</country>
+        <count>2</count>
+    </goods>
+</goodsSet>

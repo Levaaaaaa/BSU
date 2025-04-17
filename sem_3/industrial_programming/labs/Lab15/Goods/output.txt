@@ -1,0 +1,5 @@
+goods 4/UK/7
+goods 5/France/15
+goods 1/Australia/5
+goods 2/Germany/3
+goods 3/USA/12

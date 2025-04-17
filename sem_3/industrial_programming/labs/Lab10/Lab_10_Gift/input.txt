@@ -1,0 +1,4 @@
+Candy/sweet1/0.5/1
+Chocolate/sweet2/0.3/2
+Chocolate/sweet3/0.4/6
+Candy/sweet4/0.6/4

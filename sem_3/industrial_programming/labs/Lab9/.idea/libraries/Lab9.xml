@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Lab9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mouse_listener.zip!/" />
+      <root url="jar://$PROJECT_DIR$/jumping_mouse.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

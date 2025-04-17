@@ -1,0 +1,7 @@
+Type: Candy Name: sweet1 Weight(kg): 0.5 sugar proportion: 0.01
+Type: Candy Name: sweet2 Weight(kg): 0.3 sugar proportion: 0.2
+Type: Candy Name: sweet3 Weight(kg): 0.4 sugar proportion: 0.6
+Type: Candy Name: sweet4 Weight(kg): 0.6 sugar proportion: 0.4
+Type: Candy Name: addedSweet Weight(kg): 0.0 sugar proportion: 0.0
+Type: Candy Name: addedSweet Weight(kg): 0.0 sugar proportion: 0.0
+Type: Candy Name: addedSweet Weight(kg): 0.0 sugar proportion: 0.0

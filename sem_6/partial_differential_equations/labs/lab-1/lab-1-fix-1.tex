@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{setspace}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+
+\begin{document}
+\setcounter{page}{1}
+\setstretch{1.0}
+\thispagestyle{empty}
+\title{Вариант 12}
+\date{}
+\maketitle
+\section{Задание 4 (испр.). Привести уравнение к каноническому виду и упростить}
+Упростим уравнение:
+$$2u_{\xi\eta} - u_\eta + 2u = 0$$
+Проведем замену:
+$$u = e^{\alpha_1\xi + \alpha_2\eta}v$$
+$$u_\eta = (\alpha_2 v + v_\eta)e^{\alpha_1\xi + \alpha_2\eta}$$
+$$u_{\xi\eta} = (\alpha_2v_\xi + \alpha_1\alpha_2 v + \alpha_1 v_\eta + v_{\xi\eta})e^{\alpha_1\xi + \alpha_2\eta}$$
+Вычислим коэффициенты
+\begin{align*}
+    v_{\xi\eta} &: 2  &v &: 2\alpha_1\alpha_2 - \alpha_2 + 2 \\
+    v_\xi &: 2\alpha_2 &v_\eta &: 2\alpha_1 - 1
+\end{align*}
+Подставим и получим:
+$$2v_{\xi\eta} + 2v = 0 \Rightarrow v_{\xi\eta} + v = 0$$
+Ответ: $v_{\xi\eta} + v = 0$
+\end{document}

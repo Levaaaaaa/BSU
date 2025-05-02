@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Statistic.md",
+                "file": "Models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Statistic"
+              "title": "Models"
             }
           }
         ],
@@ -227,9 +227,9 @@
   },
   "active": "cbbfa8ac8a5de635",
   "lastOpenFiles": [
+    "Statistic.md",
     "Models.md",
     "Dataset.md",
-    "Statistic.md",
     "Title.md",
     "Welcome.md"
   ]

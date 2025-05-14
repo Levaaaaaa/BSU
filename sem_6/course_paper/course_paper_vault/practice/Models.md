@@ -2,8 +2,8 @@
 
 | №   | Название модели                                | Архитектура               | Описание                                  |
 | --- | ---------------------------------------------- | ------------------------- | ----------------------------------------- |
-| 1   | **XGBoost**                                    | Табличная ML              | Gradient boosting на фингерпринтах        |
-| 2   | **GCN (GraphConvModel из DeepChem)**           | Графовая (GCN)            | Работает напрямую с молекулярным графом   |
+| 1 + | **ChemBERTa**                                  | Табличная ML              | Gradient boosting на фингерпринтах        |
+| 2 + | **GCN (GraphConvModel из DeepChem)**           | Графовая (GCN)            | Работает напрямую с молекулярным графом   |
 | 3   | **MPNN (Message Passing Neural Network)**      | Графовая (MPNN)           | Учитывает сообщение между атомами         |
 | 4   | **AttentiveFP**                                | Графовая (Attention MPNN) | Более сложная графовая модель с вниманием |
 | 5   | **SchNet**                                     | Граф + 3D                 | Использует атомные координаты (если есть) |
@@ -11,12 +11,11 @@
 ### Random Forest
 Стандартный sklearn.RandomForestRegressor, обученный на выборке из [[Dataset|датасета]].
 ### Chem BERTa
-
-| Табличная ML | Gradient boosting на фингерпринтах | transformers.RobertaForSequenceClassification |
-| ------------ | ---------------------------------- | --------------------------------------------- |
+- Табличная ML
+- Gradient boosting на фингерпринтах
+- реализация - transformers.RobertaForSequenceClassification
 ### GCN
-| Графовая (GCN) | Работает напрямую с молекулярным графом | dgllife.model.GCNPredictor |
-| -------------- | --------------------------------------- | -------------------------- |
-
-
-dgllife.model.GCNPredictor, предобучен на [[Dataset|датасете]]
+- Графовая (GCN)
+- Работает напрямую с молекулярным графом
+- реализация - dgllife.model.GCNPredictor
+- необходимо предобучить на [[Dataset|датасете]]

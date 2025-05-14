@@ -1,0 +1,4 @@
+- [Prediction of small-molecule compound solubility in organic solvents by machine learning algorithms](https://link.springer.com/article/10.1186/s13321-021-00575-3)
+- [Trends in small molecule drug properties: A developability molecule assessment perspective ](https://www.sciencedirect.com/science/article/abs/pii/S1359644622003592)
+- [Antibiotic Discovery and Development](https://books.google.pl/books?hl=en&lr=&id=E6Dv5XsXU-IC&oi=fnd&pg=PR5&dq=Antibiotic+Discovery+and+Development&ots=DZsQFYp-Ph&sig=FiFiHGkDiqJfkQ9T48nLzVT8P3c&redir_esc=y#v=onepage&q&f=false)
+- 

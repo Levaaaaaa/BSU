@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper plan.md",
+                "file": "Paper_plan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Paper plan"
+              "title": "Paper_plan"
             }
           }
         ],
@@ -187,7 +187,7 @@
   "lastOpenFiles": [
     "README.md",
     "Welcome.md",
-    "Paper plan.md",
+    "Paper_plan.md",
     "Bookmarks.md",
     "practice/Models.md",
     "Title.md",

@@ -1,2 +1,2 @@
 # BSU
-My study labs
+My study materials

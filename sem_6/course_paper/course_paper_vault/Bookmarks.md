@@ -1,4 +1,6 @@
-- [Prediction of small-molecule compound solubility in organic solvents by machine learning algorithms](https://link.springer.com/article/10.1186/s13321-021-00575-3)
-- [Trends in small molecule drug properties: A developability molecule assessment perspective ](https://www.sciencedirect.com/science/article/abs/pii/S1359644622003592)
-- [Antibiotic Discovery and Development](https://books.google.pl/books?hl=en&lr=&id=E6Dv5XsXU-IC&oi=fnd&pg=PR5&dq=Antibiotic+Discovery+and+Development&ots=DZsQFYp-Ph&sig=FiFiHGkDiqJfkQ9T48nLzVT8P3c&redir_esc=y#v=onepage&q&f=false)
-- 
+1. [Prediction of small-molecule compound solubility in organic solvents by machine learning algorithms](https://link.springer.com/article/10.1186/s13321-021-00575-3)
+2. [Trends in small molecule drug properties: A developability molecule assessment perspective ](https://www.sciencedirect.com/science/article/abs/pii/S1359644622003592)
+3. [Antibiotic Discovery and Development](https://books.google.pl/books?hl=en&lr=&id=E6Dv5XsXU-IC&oi=fnd&pg=PR5&dq=Antibiotic+Discovery+and+Development&ots=DZsQFYp-Ph&sig=FiFiHGkDiqJfkQ9T48nLzVT8P3c&redir_esc=y#v=onepage&q&f=false)
+4. [ESOL: Estimating Aqueous Solubility Directly from Molecular Structure](https://www.researchgate.net/publication/8551133_ESOL_Estimating_Aqueous_Solubility_Directly_from_Molecular_Structure#:~:text=The%20ESOL%20descriptor%20is%20primarily%20designed%20to,as%20the%20octanol/water%20logP%2C%20molecular%20weight%2C%20etc.&text=The%20importance%20of%20predicting%20the%20solubility%20of,General%20Solubility%20Equation%2014%20and%20Estimated%20SOLubility.)
+5. ADME: Balani SK, Miwa GT, Gan LS, Wu JT, Lee FW (2005). "Strategy of utilizing in vitro and in vivo ADME tools for lead optimization and drug candidate selection"
+6. [Liquid Chromatography on the Different Methods for the Determination of Lipophilicity: An Essential Analytical Tool in Medicinal Chemistry by José X. Soares,Álvaro Santos,Carla Fernandes, Madalena M. M. Pinto](https://www.mdpi.com/2227-9040/10/8/340)

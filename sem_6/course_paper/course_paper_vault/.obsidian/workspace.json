@@ -8,63 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b954062ddb9f03e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "3848dcaebeccab86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Title.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Title"
-            }
-          },
-          {
-            "id": "deb24453cba241ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Title.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Title"
-            }
-          },
-          {
-            "id": "abab823b96f1c7b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Models.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Models"
-            }
-          },
-          {
-            "id": "cbbfa8ac8a5de635",
+            "id": "a4c44acfedef590a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -76,38 +20,8 @@
               "icon": "lucide-file",
               "title": "Models"
             }
-          },
-          {
-            "id": "3259773224126916",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper plan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Paper plan"
-            }
-          },
-          {
-            "id": "a4c44acfedef590a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper plan.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Paper plan"
-            }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -254,14 +168,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a4c44acfedef590a",
+  "active": "df3d8ec6c4b1edd2",
   "lastOpenFiles": [
-    "Bookmarks.md",
     "Paper plan.md",
+    "Bookmarks.md",
     "practice/Models.md",
+    "practice/Dataset.md",
     "practice/Statistic.md",
     "Title.md",
-    "practice/Dataset.md",
     "practice",
     "Welcome.md"
   ]

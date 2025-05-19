@@ -14,3 +14,6 @@
 14. ["Drug repurposing: progress, challenges and recommendations", Sudeep Pushpakom, Francesco Iorio, Patrick A. Eyers](https://www.nature.com/articles/nrd.2018.168)
 15. ["Analyzing Learned Molecular Representations for Property Prediction", Kevin Yang, Kyle Swanson, Wengong Jin](https://arxiv.org/abs/1904.01561)
 16. ["BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding", Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova](https://arxiv.org/abs/1810.04805)
+17. ["ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction", Seyone Chithrananda, Gabriel Grand, Bharath Ramsundar](https://arxiv.org/abs/2010.09885)
+18. ["Semi-Supervised Classification with Graph Convolutional Networks", Thomas N. Kipf, Max Welling](https://arxiv.org/abs/1609.02907)
+19. ["Computational Modeling of β-Secretase 1 (BACE-1) Inhibitors Using Ligand Based Approaches", Govindan Subramanian, Bharath Ramsundar, Vijay Pande, Rajiah Aldrin Denny](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00290)

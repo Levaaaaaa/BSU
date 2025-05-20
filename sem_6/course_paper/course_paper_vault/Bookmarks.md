@@ -18,3 +18,4 @@
 18. ["Semi-Supervised Classification with Graph Convolutional Networks", Thomas N. Kipf, Max Welling](https://arxiv.org/abs/1609.02907)
 19. ["Computational Modeling of β-Secretase 1 (BACE-1) Inhibitors Using Ligand Based Approaches", Govindan Subramanian, Bharath Ramsundar, Vijay Pande, Rajiah Aldrin Denny](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00290)
 20. ["Handbook of Aqueous Solubility Data", S. H. Yalkowsky, Yan He](http://ngc.digitallibrary.co.in/bitstream/123456789/2323/1/Handbook%20of%20Aqueous%20Solubility%20Data%202nd%20Ed.%20by%20Samuel%20H.%20Yalkowsky.pdf)
+21. ["MoleculeNet: a benchmark for molecular machine learning" Z. Wu, B. Ramsundar, E. N. Feinberg, J. Gomes, C. Geniesse, A. S. Pappu, K. Leswing, V. Pande](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a)

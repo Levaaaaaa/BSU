@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes.md",
+                "file": "Bookmarks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Bookmarks"
             }
           }
         ],
@@ -199,8 +199,8 @@
   },
   "active": "66875f6f487b6c4e",
   "lastOpenFiles": [
-    "Bookmarks.md",
     "Notes.md",
+    "Bookmarks.md",
     "Paper_plan.md",
     "practice/Models.md",
     "README.md",

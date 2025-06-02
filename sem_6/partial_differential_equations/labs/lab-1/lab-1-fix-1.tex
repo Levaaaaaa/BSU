@@ -5,7 +5,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{setspace}
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-
+\usepackage{listings}
 
 \begin{document}
 \setcounter{page}{1}
@@ -14,7 +14,33 @@
 \title{Вариант 12}
 \date{}
 \maketitle
-\section{Задание 4 (испр.). Привести уравнение к каноническому виду и упростить}
+\section*{Задание 2.1 (испр.) Привести уравнение к каноническому виду (гиперболический тип)}
+Ответ: \begin{align}
+    u_{\xi\eta}
+    &\quad+ \frac{(-y^2 + \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1-\sqrt{1-2y^2}))}{\quad(4x^2y^2 - 2x^2)}u_\xi \notag \\
+    &\quad+ \frac{(-y^2 - \frac{2x^2y}{\sqrt{1-2y^2}} + y/2(1+\sqrt{1-2y^2}))}{\quad(4x^2y^2 - 2x^2)}u_\eta = 0 \notag
+\end{align} 
+
+\section*{Задание 2.2 (испр.) Привести уравнение к каноническому виду (параболический тип)}
+Ответ: $$u_{\eta\eta} + \frac{(4x^2y + y^3)}{y^2}u_\xi = 0$$ 
+
+\section*{Задание 3.1 (испр.) Привести к каноническому виду (гиперболический тип)}
+Ответ:
+\begin{align}
+u_{\xi\eta} \notag
+- \frac{1}{8\sqrt{-xy}xy}(\frac{1}{\sqrt{y}} - \frac{1}{\sqrt{-x}})u_\xi \notag 
+&- \frac{1}{8\sqrt{-xy}xy}(\frac{1}{\sqrt{y}} + \frac{1}{\sqrt{-x}})u_\eta = 0 \notag
+\end{align}
+
+\section*{Задание 3.2 (испр.) Привести к каноническому виду (параболический тип)}
+Ответ:
+$$u_{\eta\eta} = 0$$
+
+\section*{Задание 3.3 (испр.) Привести к каноническому виду (элиптический тип)}
+Ответ:
+$$u_{\xi\xi} + u_{\eta\eta} + \frac{1}{2y\sqrt{y}}u_\xi + \frac{1}{2x\sqrt{x}}u_\eta$$
+
+\section*{Задание 4 (испр.). Привести уравнение к каноническому виду и упростить}
 Упростим уравнение:
 $$2u_{\xi\eta} - u_\eta + 2u = 0$$
 Проведем замену:
@@ -29,4 +55,61 @@ $$u_{\xi\eta} = (\alpha_2v_\xi + \alpha_1\alpha_2 v + \alpha_1 v_\eta + v_{\xi\e
 Подставим и получим:
 $$2v_{\xi\eta} + 2v = 0 \Rightarrow v_{\xi\eta} + v = 0$$
 Ответ: $v_{\xi\eta} + v = 0$
+
+\section*{Задание 7 (испр.). Решить задачу Гурса}
+    \begin{equation*}
+        \begin{cases}
+            u_{xx} + 6u_{xy} + 8u_{yy} + u_x + u_y = 0,
+            \\
+            x > 0, y>0,
+            \\
+            u(x,2x) = e^x, u(x, 4x) = xe^x,
+        \end{cases}
+    \end{equation*}
+\textbf{Ответ:}
+$$u(x,y) = e^{-\frac{1}{2}x + \frac{11}{8}y}((\frac{1}{2}y - x)e^{-2y+x} + e^{-3y+3x})$$
+Код для проверки решения:
+\begin{lstlisting}
+pde = D[u[x, y], {x, 2}] + 6*D[u[x, y], x, y] + 8*D[u[x, y], {y, 2}] 
++ D[u[x, y], x] + D[u[x, y], y] == 0;
+bc1 = u[x, 2*x] == Exp[x];
+bc2 = u[x, 4*x] == x*Exp[x];
+
+sol = DSolve[{pde, bc1, bc2}, u[x, y], {x, y}] // Simplify
+
+FullSimplify[sol]
+\end{lstlisting}
+\textbf{Результат проверки:}
+\begin{lstlisting}
+    {{u[x_, y_] -> E^(-(1/2)*x + (11/8)*y)*(((1/2)*y - x)*E^(-2*y + x) + E^(-3*y + 3*x))}}
+\end{lstlisting}
+
+\section*{Задание 9 (испр.). Решить задачу Коши}
+        \begin{equation*}
+            x\,u_{xx} + (x+y)\,u_{xy} + y\,u_{yy}=0,\quad x>0,\;y>0,
+        \end{equation*}
+        \[
+        u \Big|_{y=\frac{1}{x}} = x^3, \quad \quad  u_{y} \Big|_{y=\frac{1}{x}} = -x^4
+        \]
+
+    \textbf{Ответ:}
+    $$u =\frac{x^2}{y}$$
+    Код для проверки решения:
+    \begin{lstlisting}
+        
+pde = x*D[u[x, y], {x, 2}] + (x + y)*D[u[x, y], x, y] 
++ y*D[u[x, y], {y, 2}] == 0;
+
+bc1 = u[x, 1/x] == x^3;
+bc2 = Derivative[0, 1][u][x, 1/x] == -x^4;
+
+sol = DSolve[{pde, bc1, bc2}, u[x, y], {x, y}]
+
+    \end{lstlisting}
+
+\textbf{Результат проверки:}
+\begin{lstlisting}
+{{u[x, y] -> x^2/y}}
+\end{lstlisting}
+
 \end{document}

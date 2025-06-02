@@ -1,8 +1,8 @@
-PWD d:/Leva/BSU/course_3/sem_6/ДУЧП/labs/lab-1
+PWD d:/Leva/BSU/BSU/sem_6/partial_differential_equations/labs/lab-1
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Leva/BSU/course_3/sem_6/ДУЧП/labs/lab-1/lab-1.tex
+INPUT d:/Leva/BSU/BSU/sem_6/partial_differential_equations/labs/lab-1/lab-1.tex
 OUTPUT lab-1.log
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
